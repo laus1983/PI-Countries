@@ -1,36 +1,8 @@
 const { Router } = require("express");
 const { Op } = require("sequelize");
 const { Country, Activity } = require("../db.js");
-const axios = require("axios");
+const { getCountries, getInfo } = require("../controllers");
 const router = Router();
-
-const url = "https://restcountries.com/v3/all";
-
-const getInfo = async () => {
-  try {
-    const { data } = await axios.get(url);
-    const countriesFromApi = data.map((element) => {
-      const country = {
-        id: element.cca3,
-        name: element.name.common,
-        nameSearch: element.translations.spa.common,
-        flag: element.flags[0],
-        continent: element.continents[0],
-        capital: element.capital ? element.capital[0] : "No capital found",
-        subregion: element.subregion,
-        area: element.area,
-        population: element.population,
-      };
-
-      Country.findOrCreate({
-        where: { id: element.cca3 },
-        defaults: country,
-      });
-    });
-  } catch (e) {
-    (e) => console.error(e);
-  }
-};
 
 router.get("/", async (req, res, next) => {
   const { name } = req.query;
@@ -54,22 +26,21 @@ router.get("/", async (req, res, next) => {
             },
           },
         });
-        res.json(countries);
+        if (countries.length > 0) {
+          res.json(countries);
+        } else {
+          res.send("Country not found");
+        }
       }
     } catch (e) {
-      console.error(e);
+      next(e);
     }
   } else {
     try {
-      const countries = await Country.findAll();
-      if (countries.length > 0) res.json(countries);
-      else {
-        await getInfo();
-        const countries = await Country.findAll();
-        res.json(countries);
-      }
+      const result = await getCountries();
+      res.json(result);
     } catch (e) {
-      console.error(e);
+      next(e);
     }
   }
 });
@@ -94,7 +65,7 @@ router.get("/:idPais", async (req, res, next) => {
       else res.send("No matches were found");
     }
   } catch (e) {
-    console.error(e);
+    next(e);
   }
 });
 module.exports = router;
