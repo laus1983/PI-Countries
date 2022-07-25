@@ -29,7 +29,7 @@ router.get("/", async (req, res, next) => {
         if (countries.length > 0) {
           res.json(countries);
         } else {
-          res.send("Country not found");
+          res.status(404).send("Country not found");
         }
       }
     } catch (e) {
