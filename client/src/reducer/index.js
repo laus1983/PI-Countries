@@ -5,6 +5,8 @@ import {
   ORDER_BY_NAME,
   FILTER_BY_POPULATION,
   FILTER_BY_CONTINENT,
+  COUNTRIES_BY_ACTIVITIES,
+  GET_ACTIVITIES,
   POST_ACTIVITIES,
 } from "../actions/index";
 
@@ -94,7 +96,22 @@ function rootReducer(state = initialState, action) {
         ...state,
         countries: filteredByContinent,
       };
-
+    case COUNTRIES_BY_ACTIVITIES:
+      const filteredBycountries = state.countries;
+      const filteredByActivities = state.activities;
+      const actFiltered = action.payload === "all" ? filteredBycountries : filteredByActivities.filter((c) => c.name === action.payload);
+      const actToRender = action.payload === "all" ? filteredBycountries : actFiltered.map((c) => c.Countries);
+      const aux = actToRender.flat();
+      console.log(actToRender);
+      return {
+        ...state,
+        countries: aux,
+      };
+      case GET_ACTIVITIES:
+        return{
+          ...state,
+          activities: action.payload,
+        }
     case POST_ACTIVITIES:
       return {
         ...state,

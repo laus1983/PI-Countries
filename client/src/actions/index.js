@@ -6,6 +6,8 @@ export const GET_COUNTRY_BY_ID = "GET_COUNTRY_BY_ID";
 export const ORDER_BY_NAME = "ORDER_BY_NAME";
 export const FILTER_BY_POPULATION = "FILTER_BY_POPULATION";
 export const FILTER_BY_CONTINENT = "FILTER_BY_CONTINENT";
+export const COUNTRIES_BY_ACTIVITIES = "COUNTRIES_BY_ACTIVITIES";
+export const GET_ACTIVITIES = "GET_ACTIVITIES";
 export const POST_ACTIVITIES = "POST_ACTIVITIES";
 
 function removeAccents(str) {
@@ -81,6 +83,13 @@ export function filterByContinent(payload) {
   };
 }
 
+export function countriesByActivities(payload) {
+  return {
+    type: COUNTRIES_BY_ACTIVITIES,
+    payload,
+  };
+}
+
 export function postActivities(activities) {
   return async function (dispatch) {
     try {
@@ -94,6 +103,20 @@ export function postActivities(activities) {
       });
     } catch (error) {
       console.log(error);
+    }
+  };
+}
+
+export function getActivities() {
+  return async function (dispatch) {
+    try {
+      const { data } = await axios.get("http://localhost:3001/activities");
+      return dispatch({
+        type: GET_ACTIVITIES,
+        payload: data,
+      });
+    } catch (err) {
+      console.log(err)
     }
   };
 }

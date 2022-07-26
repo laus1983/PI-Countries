@@ -7,9 +7,39 @@
     width: 100%;
 }
 
+.filters{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.alphabetically{
+    padding: 5px;
+}
+
+.population{
+    padding: 5px;
+}
+
+.continents{
+    padding: 5px;
+}
+
+.activities-filter{
+    padding: 5px;
+}
+
+.clear-filters{
+    padding: 5px;
+    cursor: pointer;
+}
+
 .cards {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     background-color: #fff;
     border-radius: 2px;
