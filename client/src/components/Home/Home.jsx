@@ -13,12 +13,14 @@ import {
 import Card from "../Card/Card";
 import Pagination from "../Pagination/Pagination.jsx";
 import SearchBar from "../SearchBar/SearchBar.jsx";
+import LanguageSwitch from "../LanguageSwitch/LanguageSwitch.jsx";
 import "./Home.css";
 
 export default function Home() {
   const dispatch = useDispatch();
   const allCountries = useSelector((state) => state.countries);
   const activitiesList = useSelector((state) => state.activities);
+  const language = useSelector((state) => state.language);
   const [currentPage, setCurrentPage] = useState(1);
   const [countriesByPage /*setCountriesByPage*/] = useState(10);
   const [, /*inOrder*/ setInOrder] = useState("");
@@ -81,12 +83,15 @@ export default function Home() {
 
   return (
     <div className="home">
+      <div className="language-switch">
+        <LanguageSwitch />
+      </div>
       <div>
         <SearchBar setCurrentPage={setCurrentPage} />
       </div>
       <div className="filters">
         <div className="filters-title">
-          <h3>Filter by: </h3>
+          {language ? <h3>Filtrar por: </h3> : <h3>Filter by: </h3>}
         </div>
         <div className="alphabetically">
           <select onChange={(event) => handleSort(event)} className="alpha">

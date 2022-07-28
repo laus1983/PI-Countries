@@ -1,8 +1,10 @@
 import axios from "axios";
 
+export const SWITCH_LANGUAGE = "SWITCH_LANGUAGE"
 export const GET_COUNTRIES = "GET_COUNTRIES";
 export const GET_COUNTRIES_BY_NAME = "GET_COUNTRIES_BY_NAME";
 export const GET_COUNTRY_BY_ID = "GET_COUNTRY_BY_ID";
+export const GET_COUNTRIES_NAMES = "GET_COUNTRIES_NAMES";
 export const ORDER_BY_NAME = "ORDER_BY_NAME";
 export const FILTER_BY_POPULATION = "FILTER_BY_POPULATION";
 export const FILTER_BY_CONTINENT = "FILTER_BY_CONTINENT";
@@ -10,11 +12,18 @@ export const COUNTRIES_BY_ACTIVITIES = "COUNTRIES_BY_ACTIVITIES";
 export const GET_ACTIVITIES = "GET_ACTIVITIES";
 export const POST_ACTIVITIES = "POST_ACTIVITIES";
 
-function removeAccents(str) {
+export function removeAccents(str) {
   return str
     .toLowerCase()
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "");
+}
+
+export function switchLanguage(payload) {
+  return {
+    type: SWITCH_LANGUAGE,
+    payload,
+  }
 }
 
 export function getCountries() {
@@ -60,6 +69,20 @@ export function getById(id) {
       console.log(error);
     }
   };
+}
+
+export function getCountriesNames() {
+  return async function (dispatch) {
+    try {
+      const { data } = await axios.get("http://localhost:3001/countries");
+      dispatch({
+        type: GET_COUNTRIES_NAMES,
+        payload: data,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  }
 }
 
 export function orderByName(payload) {

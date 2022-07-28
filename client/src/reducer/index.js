@@ -1,24 +1,35 @@
 import {
+  SWITCH_LANGUAGE,
   GET_COUNTRIES,
   GET_COUNTRIES_BY_NAME,
   GET_COUNTRY_BY_ID,
+  GET_COUNTRIES_NAMES,
   ORDER_BY_NAME,
   FILTER_BY_POPULATION,
   FILTER_BY_CONTINENT,
   COUNTRIES_BY_ACTIVITIES,
   GET_ACTIVITIES,
   POST_ACTIVITIES,
+  removeAccents,
 } from "../actions/index";
 
 const initialState = {
   countries: [],
+  countriesNames: [],
   continentsFilter: [],
   countryDetails: {},
   activities: [],
+  language: true,
 };
 
 function rootReducer(state = initialState, action) {
   switch (action.type) {
+    case SWITCH_LANGUAGE:
+      const options = action.payload === 'en' ? false : true;
+      return {
+        ...state,
+        language: options,
+      };
     case GET_COUNTRIES:
       return {
         ...state,
@@ -35,6 +46,12 @@ function rootReducer(state = initialState, action) {
       return {
         ...state,
         countryDetails: action.payload,
+      };
+    case GET_COUNTRIES_NAMES:
+      const namesOfCountries = action.payload.map((c) => removeAccents(c.nameSearch));
+      return {
+        ...state,
+        countriesNames: namesOfCountries,
       };
     case ORDER_BY_NAME:
       let orderedCountries =

@@ -60,7 +60,7 @@ export default function CountryDetails() {
                 </p>
               ))
             ) : (
-              <h2 className="noActivity">¡No tiene actividades!</h2>
+              <h2 className="noActivity">It has no activities!</h2>
             )}
           </div>
         </div>

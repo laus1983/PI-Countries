@@ -36,7 +36,7 @@ export default function SearchBar({ setCurrentPage }) {
         <img src={exit} alt="Icon-exit" className="icon-exit" />
       </NavLink>
 
-      <NavLink to="/TourActivity" className="actForm">
+      <NavLink to="/activities" className="actForm">
         <h4 className="crearActividad">Create activity</h4>
       </NavLink>
       <div className="search">

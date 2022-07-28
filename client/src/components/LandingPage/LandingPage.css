@@ -13,9 +13,10 @@
     left: 0;
     bottom: 0;
     right: 0;
+    padding-left: 20px;
 }
 
-.title {
+.title-landing {
     color: white;
     font-size: 1em;
     text-align: center;
@@ -32,5 +33,27 @@
     flex-direction: column;
     justify-content: left;
     align-items: left;
+    width: 50%;
+}
+
+.landing-navlink{
+    text-decoration: none;
+}
+
+.landing-btn {
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 250;
+    font-family: Arial, Helvetica, sans-serif;
     width: auto;
+    height: 50px;
+    background-color: rgb(75, 179, 240);
+    color: white;
+    border-radius: 10px;
+    border: white solid;
 }
