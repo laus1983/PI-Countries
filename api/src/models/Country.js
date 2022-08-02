@@ -17,6 +17,12 @@ module.exports = (sequelize) => {
       nameSearch: {
         type: DataTypes.STRING,
       },
+      nameSpa: {
+        type: DataTypes.STRING,
+      },
+      nameEn: {
+        type: DataTypes.STRING,
+      },
       flag: {
         type: DataTypes.STRING,
         allowNull: false,

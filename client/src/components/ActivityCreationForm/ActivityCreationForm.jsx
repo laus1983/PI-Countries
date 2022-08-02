@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { NavLink, /*useNavigate*/ } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 import { getCountriesNames, postActivities } from "../../actions/index";
 
 function validate(input) {
@@ -15,14 +15,13 @@ function validate(input) {
   return error;
 }
 
-// let llave = 0;
-
 export default function ActivityCreationForm() {
   const dispatch = useDispatch();
+  const history = useHistory();
 
-  // const navigate = useNavigate();
 
   const countriesNames = useSelector((state) => state.countriesNames);
+  const language = useSelector((state) => state.language);
 
   const [error, setError] = useState({
     name: "Activity name is required",
@@ -40,6 +39,7 @@ export default function ActivityCreationForm() {
   useEffect(() => {
     dispatch(getCountriesNames());
   }, [dispatch]);
+
 
   function handleOnChange(e) {
     setInput({
@@ -103,16 +103,23 @@ export default function ActivityCreationForm() {
     });
     alert("Activity created!");
     // navigate("/countries");
+    history.goBack();
   }
 
   return (
     <div className="tourist-activities">
       <div className="title-activities-form">
-        <h1>Activity Creation Form</h1>
+        <h1>
+          {language
+            ? "Formulario de Creación de Actividades"
+            : "Activity Creation Form"}
+        </h1>
       </div>
       <form className="activities-form" onSubmit={(e) => handleSubmit(e)}>
         <div className="form-input-name">
-          <label>Tourist Activity: </label>
+          <label>
+            {language ? "Actividad turística: " : "Tourist Activity: "}
+          </label>
           <input
             type={"text"}
             name="name"
@@ -123,7 +130,7 @@ export default function ActivityCreationForm() {
           {error.name && <p className="error">{error.name}</p>}
         </div>
         <div className="form-input-difficulty">
-          <label>Difficulty: </label>
+          <label>{language ? "Dificultad: " : "Difficulty: "}</label>
           <input
             type={"radio"}
             name="difficulty"
@@ -161,7 +168,11 @@ export default function ActivityCreationForm() {
           5
         </div>
         <div className="form-input-duration">
-          <label>Duration (Between 1 and 12 hours): </label>
+          <label>
+            {language
+              ? "Duración (entre 1 y 12 horas): "
+              : "Duration (Between 1 and 12 hours): "}
+          </label>
           <input
             type={"range"}
             name="duration"
@@ -189,28 +200,28 @@ export default function ActivityCreationForm() {
           {error.duration && <p className="error">{error.duration}</p>}
         </div>
         <div className="form-input-season">
-          <label>Season: </label>
+          <label>{language ? "Temporada: " : "Season: "}</label>
           <select name="season" onChange={(e) => handleSeason(e)}>
-            <option disabled hidden>
-              Select a season
+            <option>
+              {language ? "Seleccione una temporada" : "Select a season"}
             </option>
-            <option value="spring">Spring</option>
-            <option value="summer">Summer</option>
-            <option value="autumn">Autumn</option>
-            <option value="winter">Winter</option>
+            <option value="spring">{language ? "Primavera" : "Spring"}</option>
+            <option value="summer">{language ? "Verano" : "Summer"}</option>
+            <option value="autumn">{language ? "Otoño" : "Autumn"}</option>
+            <option value="winter">{language ? "Invierno" : "Winter"}</option>
           </select>
         </div>
         <div className="form-input-countries">
           <label>
-            Countries:
+            {language ? "Países" : " Countries:"}
             <select
               className="countries-list"
               onChange={(e) => handleCountry(e)}
             >
               <option>
-                Select a country
+                {language ? "Seleccione un país" : "Select a country"}
               </option>
-              {countriesNames.map((c) => (
+              {countriesNames.sort().map((c) => (
                 <option key={c} value={c}>
                   {c}
                 </option>
@@ -222,7 +233,7 @@ export default function ActivityCreationForm() {
           <div className="form-country" key={c}>
             <h4 className="countries-title">{c}</h4>
             <button className="delete-btn" onClick={() => handleDelete(c)}>
-              Delete
+              {language ? "Borrar" : "Delete"}
             </button>
           </div>
         ))}
@@ -232,13 +243,13 @@ export default function ActivityCreationForm() {
             type="submit"
             disabled={error.name || error.duration ? true : false}
           >
-            Create
+            {language ? "Crear" : "Create"}
           </button>
         </div>
       </form>
       <div className="back-btn">
         <NavLink to="/countries" className="back-btn">
-          <button>⬅ Back</button>
+          <button>{language ? "⬅ Regresar" : "⬅ Back"}</button>
         </NavLink>
       </div>
     </div>

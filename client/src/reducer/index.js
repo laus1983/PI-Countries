@@ -10,7 +10,7 @@ import {
   COUNTRIES_BY_ACTIVITIES,
   GET_ACTIVITIES,
   POST_ACTIVITIES,
-  removeAccents,
+  // removeAccents,
 } from "../actions/index";
 
 const initialState = {
@@ -48,7 +48,8 @@ function rootReducer(state = initialState, action) {
         countryDetails: action.payload,
       };
     case GET_COUNTRIES_NAMES:
-      const namesOfCountries = action.payload.map((c) => removeAccents(c.nameSearch));
+      const language = state.language;
+      const namesOfCountries = language ? action.payload.map((c) => c.nameSpa) : action.payload.map((c) => c.name);
       return {
         ...state,
         countriesNames: namesOfCountries,
@@ -119,7 +120,6 @@ function rootReducer(state = initialState, action) {
       const actFiltered = action.payload === "all" ? filteredBycountries : filteredByActivities.filter((c) => c.name === action.payload);
       const actToRender = action.payload === "all" ? filteredBycountries : actFiltered.map((c) => c.Countries);
       const aux = actToRender.flat();
-      console.log(actToRender);
       return {
         ...state,
         countries: aux,

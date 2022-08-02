@@ -13,7 +13,7 @@ import {
 import Card from "../Card/Card";
 import Pagination from "../Pagination/Pagination.jsx";
 import SearchBar from "../SearchBar/SearchBar.jsx";
-import LanguageSwitch from "../LanguageSwitch/LanguageSwitch.jsx";
+// import LanguageSwitch from "../LanguageSwitch/LanguageSwitch.jsx";
 import "./Home.css";
 
 export default function Home() {
@@ -29,13 +29,16 @@ export default function Home() {
   const firstIndex = lastIndex - countriesByPage;
   const currentCountry = allCountries.slice(firstIndex, lastIndex);
 
-  let activitiesArray =
-    activitiesList && activitiesList.map((act) => act.name).sort();
   let activitiesRender = [];
+  try {let activitiesArray =
+    activitiesList && activitiesList.map((act) => act.name).sort();
   for (let i = 0; i < activitiesArray.length; i++) {
     if (activitiesArray[i] !== activitiesArray[i + 1]) {
       activitiesRender.push(activitiesArray[i]);
     }
+  }} catch (error) {
+    // console.log(activitiesRender);
+    // console.log(error);
   }
 
   const pagesToShow = (pageNumber) => {
@@ -47,7 +50,7 @@ export default function Home() {
     dispatch(getActivities());
   }, [dispatch]);
 
-  function handleOnClick(event){
+  function handleOnClick(event) {
     event.preventDefault();
     dispatch(getCountries());
     window.location.reload();
@@ -83,9 +86,9 @@ export default function Home() {
 
   return (
     <div className="home">
-      <div className="language-switch">
+      {/* <div className="language-switch">
         <LanguageSwitch />
-      </div>
+      </div> */}
       <div>
         <SearchBar setCurrentPage={setCurrentPage} />
       </div>
@@ -95,16 +98,18 @@ export default function Home() {
         </div>
         <div className="alphabetically">
           <select onChange={(event) => handleSort(event)} className="alpha">
-            <option>Alphabetically</option>
-            <option value="asc">Ascending</option>
-            <option value="desc">Descending</option>
+            <option>{language ? "Alfabéticamente" : "Alphabetically"}</option>
+            <option value="asc">{language ? "Ascendente" : "Ascending"}</option>
+            <option value="desc">
+              {language ? "Descendente" : "Descending"}
+            </option>
           </select>
         </div>
         <div className="population">
           <select onChange={(event) => handleFilterSort(event)} className="pop">
-            <option>Population</option>
-            <option value="less">Less than</option>
-            <option value="more">More than</option>
+            <option>{language ? "Población" : "Population"}</option>
+            <option value="less">{language ? "Menor" : "Less than"}</option>
+            <option value="more">{language ? "Mayor" : "More than"}</option>
           </select>
         </div>
         <div className="continents">
@@ -112,14 +117,20 @@ export default function Home() {
             onChange={(event) => handleContinentSort(event)}
             className="cont"
           >
-            <option>Continents</option>
-            <option value="Africa">Africa</option>
-            <option value="Antarctica">Antartica</option>
+            <option>{language ? "Continentes" : "Continents"}</option>
+            <option value="Africa">{language ? "África" : "Africa"}</option>
+            <option value="Antarctica">
+              {language ? "Antártida" : "Antartica"}
+            </option>
             <option value="Asia">Asia</option>
-            <option value="Europe">Europe</option>
-            <option value="North America">North America</option>
-            <option value="Oceania">Oceania</option>
-            <option value="South America">South America</option>
+            <option value="Europe">{language ? "Europa" : "Europe"}</option>
+            <option value="North America">
+              {language ? "Norteamérica" : "North America"}
+            </option>
+            <option value="Oceania">{language ? "Oceanía" : "Oceania"}</option>
+            <option value="South America">
+              {language ? "Sudamérica" : "South America"}
+            </option>
           </select>
         </div>
         <div className="activities-filter">
@@ -127,8 +138,15 @@ export default function Home() {
             onChange={(event) => handleActivitiesSort(event)}
             className="act"
           >
-            <option value={"all"}>Activities</option>
-            if (activitiesRender.length === 0){<p className="form-link">There are no activities.</p>}
+            <option value={"all"}>
+              {language ? "Actividades" : "Activities"}
+            </option>
+            if (activitiesRender.length === 0)
+            {
+              <p className="form-link">
+                {language ? "No hay actividades." : "There are no activities."}
+              </p>
+            }
             {/* {
               <NavLink to="/activities" className="activities-form">
                 <p className="form-link">
@@ -147,7 +165,14 @@ export default function Home() {
           </select>
         </div>
         <div className="clear-filters">
-          <button className="clear-filters-btn" onClick={(event) => {handleOnClick(event)}}>Clear filters</button>
+          <button
+            className="clear-filters-btn"
+            onClick={(event) => {
+              handleOnClick(event);
+            }}
+          >
+            {language ? "Borrar filtros" : "Clear filters"}
+          </button>
         </div>
       </div>
       <div className="cards">
@@ -156,7 +181,7 @@ export default function Home() {
             <Card
               key={e.id}
               id={e.id}
-              name={e.name}
+              name={language ? e.nameSpa : e.name}
               flag={e.flag}
               continent={e.continent}
             />

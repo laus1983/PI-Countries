@@ -18,6 +18,8 @@ const getInfo = async () => {
         id: element.cca3,
         name: element.name.common,
         nameSearch: removeAccents(element.translations.spa.common),
+        nameSpa: element.translations.spa.common,
+        nameEn: element.name.common.toLowerCase(),
         flag: element.flags[0],
         continent: element.continents[0],
         capital: element.capital ? element.capital[0] : "Capital not found",

@@ -57,3 +57,7 @@
     border-radius: 10px;
     border: white solid;
 }
+
+.language-switch {
+    display: flex;
+}

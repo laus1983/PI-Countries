@@ -6,19 +6,11 @@ const router = Router();
 
 router.get("/", async (req, res, next) => {
   const { name } = req.query;
+  const { language } = req.query;
+  console.log(language);
   if (name) {
     try {
-      const countries = await Country.findAll({
-        where: {
-          nameSearch: {
-            [Op.iLike]: `%${name}%`,
-          },
-        },
-      });
-      if (countries.length > 0) {
-        res.json(countries);
-      } else {
-        await getInfo();
+      if (language === "true") {
         const countries = await Country.findAll({
           where: {
             nameSearch: {
@@ -29,7 +21,44 @@ router.get("/", async (req, res, next) => {
         if (countries.length > 0) {
           res.json(countries);
         } else {
-          res.status(404).send("Country not found");
+          await getInfo();
+          const countries = await Country.findAll({
+            where: {
+              nameSearch: {
+                [Op.iLike]: `%${name}%`,
+              },
+            },
+          });
+          if (countries.length > 0) {
+            res.json(countries);
+          } else {
+            res.status(404).send("País no encontrado");
+          }
+        }
+      } else {
+        const countries = await Country.findAll({
+          where: {
+            nameEn: {
+              [Op.iLike]: `%${name}%`,
+            },
+          },
+        });
+        if (countries.length > 0) {
+          res.json(countries);
+        } else {
+          await getInfo();
+          const countries = await Country.findAll({
+            where: {
+              nameEn: {
+                [Op.iLike]: `%${name}%`,
+              },
+            },
+          });
+          if (countries.length > 0) {
+            res.json(countries);
+          } else {
+            res.status(404).send("Country not found");
+          }
         }
       }
     } catch (e) {

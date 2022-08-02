@@ -40,12 +40,13 @@ export function getCountries() {
   };
 }
 
-export function getByName(name) {
+export function getByName(name, language) {
   return async function (dispatch) {
     try {
-      const nameToSearch = removeAccents(name);
+      const nameToSearch = language ? removeAccents(name) : name.toLowerCase();
+      const languageString = language.toString();
       const { data } = await axios.get(
-        `http://localhost:3001/countries?name=${nameToSearch}`
+        `http://localhost:3001/countries?name=${nameToSearch}&language=${languageString}`
       );
       dispatch({
         type: GET_COUNTRIES_BY_NAME,
