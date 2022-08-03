@@ -24,3 +24,10 @@
   border-radius: 5px;
   border: white solid;
 }
+
+.switch-language-select:hover {
+  background-color: white;
+  color: rgb(75, 179, 240);
+  border: rgb(75, 179, 240) solid;
+  font-weight: 300;
+}

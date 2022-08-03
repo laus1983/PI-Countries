@@ -61,3 +61,10 @@
 .language-switch {
     display: flex;
 }
+
+.landing-btn:hover {
+    background-color: white;
+    color: rgb(75, 179, 240);
+    border: rgb(75, 179, 240) solid;
+    font-weight: 300;
+}

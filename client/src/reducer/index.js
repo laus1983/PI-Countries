@@ -1,4 +1,5 @@
 import {
+  LOADING,
   SWITCH_LANGUAGE,
   GET_COUNTRIES,
   GET_COUNTRIES_BY_NAME,
@@ -20,10 +21,16 @@ const initialState = {
   countryDetails: {},
   activities: [],
   language: true,
+  isLoading: false,
 };
 
 function rootReducer(state = initialState, action) {
   switch (action.type) {
+    case LOADING:
+      return {
+        ...state,
+        isLoading: true,
+      };
     case SWITCH_LANGUAGE:
       const options = action.payload === 'en' ? false : true;
       return {
@@ -35,17 +42,20 @@ function rootReducer(state = initialState, action) {
         ...state,
         countries: action.payload,
         continentsFilter: action.payload,
+        isLoading: false,
       };
     case GET_COUNTRIES_BY_NAME:
       return {
         ...state,
         // country: action.payload,
         countries: action.payload,
+        isLoading: false,
       };
     case GET_COUNTRY_BY_ID:
       return {
         ...state,
         countryDetails: action.payload,
+        isLoading: false,
       };
     case GET_COUNTRIES_NAMES:
       const language = state.language;

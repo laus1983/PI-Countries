@@ -22,7 +22,7 @@ export default function LandingPage() {
         </NavLink>
       </div>
       <div className="language-switch">
-        <LanguageSwitch />
+        <LanguageSwitch/>
       </div>
     </div>
   );

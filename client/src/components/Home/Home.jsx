@@ -13,6 +13,7 @@ import {
 import Card from "../Card/Card";
 import Pagination from "../Pagination/Pagination.jsx";
 import SearchBar from "../SearchBar/SearchBar.jsx";
+import Spinner from "../Spinner/Spinner.jsx";
 // import LanguageSwitch from "../LanguageSwitch/LanguageSwitch.jsx";
 import "./Home.css";
 
@@ -21,6 +22,7 @@ export default function Home() {
   const allCountries = useSelector((state) => state.countries);
   const activitiesList = useSelector((state) => state.activities);
   const language = useSelector((state) => state.language);
+  const isLoading = useSelector((state) => state.isLoading);
   const [currentPage, setCurrentPage] = useState(1);
   const [countriesByPage /*setCountriesByPage*/] = useState(10);
   const [, /*inOrder*/ setInOrder] = useState("");
@@ -86,10 +88,14 @@ export default function Home() {
 
   return (
     <div className="home">
-      {/* <div className="language-switch">
+      { isLoading ? (
+        <div className="loading-spinner">
+        <Spinner />
+        </div>
+      ) : (<>{/* <div className="language-switch">
         <LanguageSwitch />
       </div> */}
-      <div>
+      <div className="search-bar">
         <SearchBar setCurrentPage={setCurrentPage} />
       </div>
       <div className="filters">
@@ -194,7 +200,7 @@ export default function Home() {
           allCountries={allCountries.length}
           pagesToShow={pagesToShow}
         />
-      </div>
+      </div></>)}
     </div>
   );
 }

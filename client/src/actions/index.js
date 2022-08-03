@@ -1,5 +1,6 @@
 import axios from "axios";
 
+export const LOADING = "LOADING";
 export const SWITCH_LANGUAGE = "SWITCH_LANGUAGE"
 export const GET_COUNTRIES = "GET_COUNTRIES";
 export const GET_COUNTRIES_BY_NAME = "GET_COUNTRIES_BY_NAME";
@@ -19,6 +20,12 @@ export function removeAccents(str) {
     .replace(/[\u0300-\u036f]/g, "");
 }
 
+export function loading() {
+  return {
+    type: LOADING
+  };
+}
+
 export function switchLanguage(payload) {
   return {
     type: SWITCH_LANGUAGE,
@@ -28,6 +35,7 @@ export function switchLanguage(payload) {
 
 export function getCountries() {
   return async function (dispatch) {
+    dispatch(loading());
     try {
       const { data } = await axios.get("http://localhost:3001/countries");
       dispatch({
@@ -42,6 +50,7 @@ export function getCountries() {
 
 export function getByName(name, language) {
   return async function (dispatch) {
+    dispatch(loading());
     try {
       const nameToSearch = language ? removeAccents(name) : name.toLowerCase();
       const languageString = language.toString();
@@ -60,6 +69,7 @@ export function getByName(name, language) {
 
 export function getById(id) {
   return async function (dispatch) {
+    dispatch(loading());
     try {
       const { data } = await axios.get(`http://localhost:3001/countries/${id}`);
       dispatch({
