@@ -29,8 +29,10 @@ export default function Card({id, flag, name, continent}) {
 
   return (
     <div className="card">
+      <div className="country-name">
       <h1 className="country">{name}</h1>
-      <h2 className="continent">{language ? continentName(continent) : continent}</h2>
+      </div>
+      <h2 className="continent">{language ? continentName(continent) ? continentName(continent) : "Continente no encontrado" : continent ? continent : "Continent not found"}</h2>
       <NavLink to={`/countries/${id}`}>
         <img className="flag" src={flag} alt={name} />
       </NavLink>

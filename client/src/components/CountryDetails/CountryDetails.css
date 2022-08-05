@@ -1,0 +1,166 @@
+.countryDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #eeeeee;
+}
+
+.flag-container {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 30px;
+  padding: 30px;
+  border: 20px;
+}
+
+.flag-info {
+  width: 100%;
+  height: 100%;
+  border: #143959 solid;
+}
+
+.details {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.country-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  text-align: left;
+  width: 100%;
+  height: 100%;
+}
+
+.back-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.back{
+    width: 100%;
+    height: 100%;
+}
+
+.back-btn {
+  background-color: #143959;
+  color: #eeeeee;
+  font-family: poppins;
+  font-size: 15px;
+  font-weight: bold;
+  border: #eeeeee solid;
+  border-radius: 5px;
+  width: 100px;
+  height: 40px;
+}
+
+.back-btn:hover {
+  background-color: #eeeeee;
+  color: #143959;
+  border: #143959 solid;
+}
+
+.country-id {
+  font-family: poppins;
+  font-weight: bold;
+  /* font-size: 50px; */
+  color: #143959;
+}
+
+.country-name-1 {
+  font-family: poppins;
+  font-weight: bold;
+  /* font-size: 20px; */
+  color: #143959;
+}
+
+.country-capital-label {
+  font-family: poppins;
+  font-weight: bold;
+  /* font-size: 20px; */
+  color: #143959;
+}
+
+.country-capital-info {
+  font-family: poppins;
+  font-weight: bold;
+  /* font-size: 20px; */
+  color: #616161;
+}
+
+.country-subregion-label {
+  font-family: poppins;
+  font-weight: bold;
+  /* font-size: 20px; */
+  color: #143959;
+}
+
+.country-subregion-info {
+  font-family: poppins;
+  font-weight: bold;
+  /* font-size: 20px; */
+  color: #616161;
+}
+
+.country-area-label {
+  font-family: poppins;
+  font-weight: bold;
+  /* font-size: 20px; */
+  color: #143959;
+}
+
+.country-area-info {
+  font-family: poppins;
+  font-weight: bold;
+  /* font-size: 20px; */
+  color: #616161;
+}
+
+.country-poblacion-label {
+  font-family: poppins;
+  font-weight: bold;
+  /* font-size: 20px; */
+  color: #143959;
+}
+
+.country-poblacion-info {
+  font-family: poppins;
+  font-weight: bold;
+  /* font-size: 20px; */
+  color: #616161;
+}
+
+.activities-container {
+  width: 100%;
+  height: 100%;
+}
+
+.activities-label {
+  font-family: poppins;
+  font-weight: bold;
+  /* font-size: 20px; */
+  color: #143959;
+}
+
+.noActivity {
+  font-family: poppins;
+  font-weight: bold;
+  /* font-size: 20px; */
+  color: #143959;
+}

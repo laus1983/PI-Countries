@@ -1,49 +1,70 @@
 .card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 10px;
-    color: #d69510;
-    /* color: #1a9695; */
-    /* background-color: #fff; */
-    background-color: #0b4683;
-    /* background-color: #1a9695; */
-    /* opacity: 0.7; */
-    border: 3px;
-    border-style: solid;
-    border-radius: 8px;
-    /* border-color: #000; */
-    border-color: #d69510;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    /* margin-bottom: 20px; */
-    margin: 15px;
-    padding: 20px;
-    width: 250px;
-    height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* font-family: poppins;
+  font-size: 7px; */
+  color: #143959;
+  /* background-color: #8aedf6; */
+  background-color: white;
+  /* opacity: 0.5; */
+  /* background: rgb(255, 255, 255);
+  background: linear-gradient(
+    20deg,
+    rgba(255, 255, 255, 1) 34%,
+    rgba(138, 237, 246, 1) 67%,
+    rgba(96, 162, 245, 1) 89%
+  ); */
+  border: 5px;
+  border-style: solid;
+  border-radius: 9px;
+  /* border-color: #000; */
+  border-color: #143959;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  /* margin-bottom: 20px; */
+  margin: 15px;
+  /* padding: 20px; */
+  width: 190px;
+  height: 190px;
 }
 
 .flag {
-    width: 100px;
-    height: 100px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border: 3px;
-    border-radius: 5px;
-    border-style: solid;
-    /* border-color: #000; */
-    border-color: #d69510;
+  width: 65px;
+  height: 65px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 2px;
+  border-radius: 5px;
+  border-style: solid;
+  /* border-color: #000; */
+  border-color: #143959;
+  margin: 0px 7px 15px 7px;
 }
 
 .continent {
-    border: 3px;
-    border-style: solid;
-    /* border-color: #000; */
-    border-color: #d69510;
-    border-radius: 5px;
+  font-family: poppins;
+  font-size: 11px;
+  border: 2px;
+  border-style: solid;
+  align-self: center;
+  /* color: #013440; */
+  /* border-color: #000; */
+  border-color: #143959;
+  border-radius: 10px;
+  margin: 15px;
+  padding: 3px 15px 3px 15px;
+  width: fit-content;
+  height: fit-content;
 }
 
+.country-name {
+  font-size: 7px;
+  font-family: poppins;
+  font-weight: bold;
+  color: white;
+  background-color: #143959;
+}
 /* .name {
     font-size: 1.5em;
     font-weight: bold;
@@ -52,3 +73,7 @@
     border-color: #000;
     border-radius: 5px;
 } */
+
+.card:hover{
+    transform: scale(1.1, 1.1);
+}

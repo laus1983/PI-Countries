@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 import { getByName } from "../../actions/index.js";
 import Spinner from "../Spinner/Spinner.jsx";
 // import icon from './global-research.png';
-import exit from "./exit.png";
+import exit from "./icon-logout.png";
 import "./SearchBar.css";
 
 export default function SearchBar({ setCurrentPage }) {
@@ -48,13 +48,14 @@ export default function SearchBar({ setCurrentPage }) {
       <div className="search">
         <form onSubmit={handleSubmit}>
           <input
+            className="search-input"
             type="text"
             placeholder={language ? "Buscar..." : "Search..."}
             onChange={handleInput}
             value={name}
           />
           {/* <button className='submit' type='submit'><img src={icon} alt='Icon-search' className='icon-search'/></button> */}
-          <input type="submit" value={language ? "Busqueda" : "Search"} className="icon-search" />
+          <input type="submit" value={language ? "Búsqueda" : "Search"} className="icon-search" />
         </form>
       </div>
       </>)}

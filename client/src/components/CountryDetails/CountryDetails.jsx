@@ -28,33 +28,33 @@ export default function CountryDetails() {
           {country.hasOwnProperty("name") ? (
             <div>
               <div className="details">
-                <div>
-                  <img className="flag" src={country.flag} alt={country.name} />
+                <div className="flag-container">
+                  <img className="flag-info" src={country.flag} alt={country.name} />
                 </div>
                 <div className="country-info">
-                  <h1>{country.id}</h1>
-                  <h2>{language ? country.nameSpa : country.name}</h2>
-                  <h3>
-                    <i>Capital: </i>
+                  <h1 className="country-id">{country.id}</h1>
+                  <h2 className="country-name-1">{language ? country.nameSpa : country.name}</h2>
+                  <h3 className="country-capital-info">
+                    <i className="country-capital-label">Capital: </i>
                     {country.capital}
                   </h3>
-                  <h3>
-                    <i>{language ? "Subregión: " : "Subregion: "}</i>
+                  <h3 className="country-subregion-info">
+                    <i className="country-subregion-label">{language ? "Subregión: " : "Subregion: "}</i>
                     {country.subregion}
                   </h3>
-                  <h3>
-                    <i>{language ? "Área: " : "Area: "}</i>
+                  <h3 className="country-area-info">
+                    <i className="country-area-label">{language ? "Área: " : "Area: "}</i>
                     {parseInt(country.area).toLocaleString("de-DE")} Km2
                   </h3>
-                  <h3>
-                    <i>{language ? "Población: " : "Population: "}</i>
+                  <h3 className="country-poblacion-info">
+                    <i className="country-poblacion-label">{language ? "Población: " : "Population: "}</i>
                     {country.population.toLocaleString("de-DE")}
                   </h3>
                 </div>
               </div>
-              <div className="activities">
+              <div className="activities-container">
                 <h2>
-                  <i>{language ? "Actividades" : "Activities: "}</i>
+                  <i className="activities-label">{language ? "Actividades" : "Activities: "}</i>
                 </h2>
                 {country.Activities?.length > 0 ? (
                   country.Activities?.map((act) => (
@@ -83,9 +83,9 @@ export default function CountryDetails() {
               {language ? "¡País no encontrado!" : "¡Country not found!"}
             </h2>
           )}
-          <div className="back">
+          <div className="back-container">
             <NavLink to="/countries" className="back">
-              <button>{language ? "⬅ Volver" : "⬅ Go Back"}</button>
+              <button className="back-btn">{language ? "⬅ Volver" : "⬅ Go Back"}</button>
             </NavLink>
           </div>
         </>
