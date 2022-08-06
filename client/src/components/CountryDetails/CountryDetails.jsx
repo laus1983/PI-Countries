@@ -15,6 +15,21 @@ export default function CountryDetails() {
   const language = useSelector((state) => state.language);
   const isLoading = useSelector((state) => state.isLoading);
 
+  function seasonName (season){
+    switch (season) {
+      case "spring":
+        return "Primavera";
+      case "summer":
+        return "Verano";
+      case "autumn":
+        return "Otoño";
+      case "winter":
+        return "Invierno";
+      default:
+        break;
+    }
+  }
+
   useEffect(() => {
     dispatch(getById(id));
   }, [dispatch, id]);
@@ -32,41 +47,41 @@ export default function CountryDetails() {
                   <img className="flag-info" src={country.flag} alt={country.name} />
                 </div>
                 <div className="country-info">
-                  <h1 className="country-id">{country.id}</h1>
-                  <h2 className="country-name-1">{language ? country.nameSpa : country.name}</h2>
-                  <h3 className="country-capital-info">
-                    <i className="country-capital-label">Capital: </i>
+                  <h1 className="countries-info-labels">{country.id}</h1>
+                  <h2 className="countries-info-labels">{language ? country.nameSpa : country.name}</h2>
+                  <h3 className="countries-info-content">
+                    <i className="countries-info-labels">Capital: </i>
                     {country.capital}
                   </h3>
-                  <h3 className="country-subregion-info">
-                    <i className="country-subregion-label">{language ? "Subregión: " : "Subregion: "}</i>
+                  <h3 className="countries-info-content">
+                    <i className="countries-info-labels">{language ? "Subregión: " : "Subregion: "}</i>
                     {country.subregion}
                   </h3>
-                  <h3 className="country-area-info">
-                    <i className="country-area-label">{language ? "Área: " : "Area: "}</i>
+                  <h3 className="countries-info-content">
+                    <i className="countries-info-labels">{language ? "Área: " : "Area: "}</i>
                     {parseInt(country.area).toLocaleString("de-DE")} Km2
                   </h3>
-                  <h3 className="country-poblacion-info">
-                    <i className="country-poblacion-label">{language ? "Población: " : "Population: "}</i>
+                  <h3 className="countries-info-content">
+                    <i className="countries-info-labels">{language ? "Población: " : "Population: "}</i>
                     {country.population.toLocaleString("de-DE")}
                   </h3>
                 </div>
               </div>
               <div className="activities-container">
-                <h2>
+                <h2 className="activities-label-title">
                   <i className="activities-label">{language ? "Actividades" : "Activities: "}</i>
                 </h2>
                 {country.Activities?.length > 0 ? (
                   country.Activities?.map((act) => (
-                    <p key={act.id}>
-                      <li>Id: {act.id}</li>
-                      <li className="titleAct">
-                        {language ? "Actividad: " : "Activity: "}
+                    <p className="activities-info-container" key={act.id}>
+                      {/* <li className="actInfoLabel">Id: {act.id}</li> */}
+                      <li className="actInfoLabel-1">
+                        {/* {language ? "Actividad: " : "Activity: "} */}
                         {act.name}
-                      </li>
-                      <li>Season: {act.season}</li>
-                      <li>Duration: {act.duration}</li>
-                      <li>Difficulty: {act.difficulty}</li>
+                        </li>
+                      <li className="actInfoLabel">{language ? "Temporada: " : "Season: "}{language ? seasonName(act.season) : act.season}</li>
+                      <li className="actInfoLabel">{language ? "Duración: " : "Duration: "}{act.duration}</li>
+                      <li className="actInfoLabel">{language ? "Dificultad: " : "Difficulty: "} {act.difficulty}</li>
                     </p>
                   ))
                 ) : (
@@ -85,7 +100,7 @@ export default function CountryDetails() {
           )}
           <div className="back-container">
             <NavLink to="/countries" className="back">
-              <button className="back-btn">{language ? "⬅ Volver" : "⬅ Go Back"}</button>
+              <button className="back-btn-info">{language ? "⬅ Volver" : "⬅ Go Back"}</button>
             </NavLink>
           </div>
         </>
