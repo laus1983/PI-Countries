@@ -2,6 +2,7 @@ import axios from "axios";
 
 export const LOADING = "LOADING";
 export const SWITCH_LANGUAGE = "SWITCH_LANGUAGE"
+export const DARK_MODE = "DARK_MODE"
 export const GET_COUNTRIES = "GET_COUNTRIES";
 export const GET_COUNTRIES_BY_NAME = "GET_COUNTRIES_BY_NAME";
 export const GET_COUNTRY_BY_ID = "GET_COUNTRY_BY_ID";
@@ -30,6 +31,12 @@ export function switchLanguage(payload) {
   return {
     type: SWITCH_LANGUAGE,
     payload,
+  }
+}
+
+export function darkModeAction() {
+  return {
+    type: DARK_MODE,
   }
 }
 

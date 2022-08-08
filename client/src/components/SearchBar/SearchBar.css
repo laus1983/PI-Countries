@@ -20,7 +20,6 @@
   font-family: poppins;
   font-weight: bold;
   font-size: 20px;
-  /* font-style: italic; */
 }
 
 .actForm:hover{
@@ -32,6 +31,7 @@
   padding: 5px;
   background-color: #143959;
   color: #eeeeee;
+  font-weight: bold;
   border: #eeeeee solid;
   border-radius: 5px;
 }
@@ -58,4 +58,44 @@
   color: #143959;
   border: #143959 solid;
   border-radius: 5px;
+}
+
+.actForm-dark{
+  padding: 5px;
+  text-decoration: none;
+  color: white;
+  font-family: poppins;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.actForm-dark:hover{
+  color: #556ff7;
+  text-decoration: underline;
+  transition: 0.3s;
+}
+
+.icon-search-dark{
+  cursor: pointer;
+  padding: 5px;
+  margin: 5px;
+  background-color: #556ff7;
+  color: white;
+  font-weight: bold;
+  border: #556ff7 solid;
+  border-radius: 5px;
+}
+
+.icon-search-dark:hover{
+  background-color: white;
+  color: #556ff7;
+  border: #556ff7 solid;
+}
+
+.search-input-dark{
+  padding: 9px;
+  width: 300px;
+  height: 5px;
+  border: #28364e solid;
+  border-radius: 10px;
 }

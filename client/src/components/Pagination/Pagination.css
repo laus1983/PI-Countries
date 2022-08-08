@@ -27,3 +27,24 @@
 .page-number:hover{
     font-weight: bold;
 }
+
+.pagination-nav-dark{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #0a0d14;
+}
+
+.page-number-dark{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    color: #556ff7;
+}
+
+.page-number-dark:hover{
+    color: white;
+    font-weight: bold;
+}

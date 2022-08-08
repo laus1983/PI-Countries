@@ -1,0 +1,425 @@
+.tourist-activities {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #e0e0e0;
+}
+
+.form-img-container {
+  display: flex;
+  flex-direction: column;
+  background-image: url("./fondo-img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 40vw;
+  height: 90vh;
+  border: 2px black solid;
+  border-radius: 15px;
+  margin-right: 50px;
+  margin-left: 15px;
+}
+
+.title-activities-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: poppins;
+  font-weight: bold;
+}
+
+.activities-form {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  text-align: left;
+  font-family: poppins;
+  font-weight: bold;
+  color: black;
+  padding: 15px;
+  border-radius: 15px;
+  width: fit-content;
+  height: auto;
+  margin: 20px;
+  border: 5px #018abe solid;
+  background: rgb(214, 232, 238);
+  background: linear-gradient(
+    20deg,
+    rgba(214, 232, 238, 1) 5%,
+    rgba(151, 202, 219, 1) 17%,
+    rgba(1, 138, 190, 1) 46%,
+    rgba(2, 69, 122, 1) 84%,
+    rgba(0, 27, 72, 1) 96%
+  );
+}
+
+.form-input-name {
+  display: flex;
+  flex-direction: column;
+  padding: 3px;
+  margin: 3px;
+  color: white;
+  font-family: poppins;
+  font-weight: bold;
+}
+
+.form-name-box {
+  border: 2px #018abe solid;
+  border-radius: 10px;
+  padding: 3px;
+  margin: 3px;
+  font-family: poppins;
+  font-size: 14px;
+  width: fit-content;
+}
+
+.error-form {
+  color: red;
+  font-family: poppins;
+  font-weight: bold;
+}
+
+.form-input-duration {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 3px;
+  margin: 3px;
+  color: white;
+  font-family: poppins;
+  font-weight: bold;
+}
+
+.form-input-difficulty {
+  display: flex;
+  flex-direction: row;
+  padding: 3px;
+  margin: 3px;
+  color: white;
+  font-family: poppins;
+  font-weight: bold;
+}
+
+.form-input-season {
+  display: flex;
+  flex-direction: row;
+  padding: 3px;
+  margin: 3px;
+  color: white;
+  font-family: poppins;
+  font-weight: bold;
+}
+
+.form-season-select {
+  margin-left: 3px;
+  border-radius: 10px;
+  border: 2px #018abe solid;
+  color: black;
+  font-family: poppins;
+  font-size: 14px;
+  background-color: white;
+}
+
+.form-season-select:hover {
+  border: 2px white solid;
+  color: white;
+  background-color: #018abe;
+}
+
+.form-input-countries {
+  display: flex;
+  flex-direction: row;
+  padding: 3px;
+  margin: 3px;
+  color: white;
+  font-family: poppins;
+  font-weight: bold;
+}
+
+.countries-list {
+  margin-left: 3px;
+  border-radius: 10px;
+  border: 2px #018abe solid;
+  color: black;
+  font-family: poppins;
+  font-size: 14px;
+  background-color: white;
+}
+
+.countries-list:hover {
+  border: 2px white solid;
+  color: white;
+  background-color: #018abe;
+}
+
+.form-country-activities {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 3px;
+  margin: 3px;
+  color: black;
+  font-family: poppins;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+}
+
+.form-country {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  padding: 5px;
+  border: 2px black solid;
+}
+
+.countries-title {
+  margin: 2px;
+}
+
+.back-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.form-input-submit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+  margin: 3px;
+}
+
+.delete-btn {
+  cursor: pointer;
+  font-family: poppins;
+  font-weight: bold;
+  background-color: white;
+  color: black;
+  border: 3px white solid;
+  border-radius: 5px;
+  margin: 2px;
+}
+
+.create-btn {
+  cursor: pointer;
+  font-family: poppins;
+  font-weight: bold;
+  background-color: #018abe;
+  color: white;
+  border: 3px white solid;
+  border-radius: 5px;
+}
+
+.go-back-btn {
+  cursor: pointer;
+  font-family: poppins;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: #e0e0e0;
+  color: black;
+  border: 3px #e0e0e0 solid;
+  border-radius: 5px;
+  width: 100px;
+  height: 35px;
+}
+
+.go-back-btn:hover {
+  background-color: white;
+  color: #018abe;
+  border-color: #018abe;
+}
+
+.create-btn:hover {
+  background-color: white;
+  color: #018abe;
+  border-color: #018abe;
+}
+
+.delete-btn:hover {
+  background-color: #018abe;
+  color: white;
+}
+
+.title-activities-form-dark{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #556ff7;
+  font-family: poppins;
+  font-weight: bold;
+}
+
+.tourist-activities-dark{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #28364e;
+}
+
+.activities-form-dark{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  text-align: left;
+  font-family: poppins;
+  font-weight: bold;
+  color: black;
+  padding: 15px;
+  border-radius: 15px;
+  width: fit-content;
+  height: auto;
+  margin: 20px;
+  border: 5px #556ff7 solid;
+  background-color: #0a0d14;
+}
+
+.form-name-box-dark{
+  border: 2px #556ff7 solid;
+  border-radius: 10px;
+  padding: 3px;
+  margin: 3px;
+  font-family: poppins;
+  font-size: 14px;
+  width: fit-content;
+}
+
+.form-season-select-dark{
+  margin-left: 3px;
+  border-radius: 10px;
+  border: 2px #556ff7 solid;
+  color: white;
+  font-family: poppins;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #0a0d14;
+}
+
+.form-season-select-dark:hover{
+  color: #0a0d14;
+  font-weight: bold;
+  background-color: white;
+  border: #556ff7 solid;
+}
+
+.countries-list-dark{
+  margin-left: 3px;
+  border-radius: 10px;
+  border: 2px #556ff7 solid;
+  color: white;
+  font-family: poppins;
+  font-size: 14px;
+  background-color: #0a0d14;
+}
+
+.countries-list-dark:hover{
+  color: #0a0d14;
+  font-weight: bold;
+  background-color: white;
+  border: #556ff7 solid;
+}
+
+.form-country-activities-dark {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 3px;
+  margin: 3px;
+  color: white;
+  font-family: poppins;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+}
+
+.form-country-dark{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  padding: 5px;
+  border: 2px #556ff7 solid;
+}
+
+.delete-btn-dark{
+  cursor: pointer;
+  font-family: poppins;
+  font-weight: bold;
+  background-color: #556ff7;
+  color: white;
+  border: 3px #556ff7 solid;
+  border-radius: 5px;
+  margin: 2px;
+}
+
+.delete-btn-dark:hover {
+  background-color: white;
+  border: 3px #556ff7 solid;
+  color: #556ff7;
+}
+
+.create-btn-dark{
+  cursor: pointer;
+  font-family: poppins;
+  font-weight: bold;
+  background-color: #556ff7;
+  color: white;
+  border: 3px #556ff7 solid;
+  border-radius: 5px;
+}
+
+.create-btn-dark:hover{
+  cursor: pointer;
+  font-family: poppins;
+  font-weight: bold;
+  background-color: white;
+  color: #556ff7;
+  border: 3px #556ff7 solid;
+  border-radius: 5px;
+}
+
+.go-back-btn-dark{
+  cursor: pointer;
+  font-family: poppins;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: white;
+  color: black;
+  border: 3px white solid;
+  border-radius: 5px;
+  width: 100px;
+  height: 35px;
+}
+
+.go-back-btn-dark:hover{
+  cursor: pointer;
+  font-family: poppins;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: white;
+  color: #556ff7;
+  border: 3px #556ff7 solid;
+  border-radius: 5px;
+  width: 100px;
+  height: 35px;
+}

@@ -4,8 +4,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { getByName } from "../../actions/index.js";
 import Spinner from "../Spinner/Spinner.jsx";
-// import icon from './global-research.png';
+import DarkMode from "../DarkMode/DarkMode.jsx";
 import exit from "./icon-logout.png";
+import exitDark from "./7.png";
 import "./SearchBar.css";
 
 export default function SearchBar({ setCurrentPage }) {
@@ -13,6 +14,7 @@ export default function SearchBar({ setCurrentPage }) {
   const [name, setName] = useState("");
   const language = useSelector((state) => state.language);
   const isLoading = useSelector((state) => state.isLoading);
+  const darkMode = useSelector((state) => state.darkMode);
 
   function handleInput(event) {
     // console.log(ev.target.value);
@@ -39,23 +41,26 @@ export default function SearchBar({ setCurrentPage }) {
           <Spinner />
         ) : (<>
       <NavLink to="/">
-        <img src={exit} alt="Icon-exit" className="icon-exit" />
+        <img src={darkMode ? exitDark : exit} alt="Icon-exit" className="icon-exit" />
       </NavLink>
 
-      <NavLink to="/activities" className="actForm">
+      <NavLink to="/activities" className={darkMode ? "actForm-dark" : "actForm"}>
         <h4 className="crearActividad">{language ? "Crear actividad" : "Create activity"}</h4>
       </NavLink>
+      <div>
+      <DarkMode />
+      </div>
       <div className="search">
         <form onSubmit={handleSubmit}>
           <input
-            className="search-input"
+            className={darkMode ? "search-input-dark" : "search-input"}
             type="text"
             placeholder={language ? "Buscar..." : "Search..."}
             onChange={handleInput}
             value={name}
           />
           {/* <button className='submit' type='submit'><img src={icon} alt='Icon-search' className='icon-search'/></button> */}
-          <input type="submit" value={language ? "Búsqueda" : "Search"} className="icon-search" />
+          <input type="submit" value={language ? "Búsqueda" : "Search"} className={darkMode ? "icon-search-dark" : "icon-search"} />
         </form>
       </div>
       </>)}

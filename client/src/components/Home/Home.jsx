@@ -23,6 +23,7 @@ export default function Home() {
   const activitiesList = useSelector((state) => state.activities);
   const language = useSelector((state) => state.language);
   const isLoading = useSelector((state) => state.isLoading);
+  const darkMode = useSelector((state) => state.darkMode);
   const [currentPage, setCurrentPage] = useState(1);
   const [countriesByPage /*setCountriesByPage*/] = useState(10);
   const [, /*inOrder*/ setInOrder] = useState("");
@@ -87,7 +88,7 @@ export default function Home() {
   }
 
   return (
-    <div className="home">
+    <div className={darkMode ? "home-dark" : "home"}>
       { isLoading ? (
         <div className="loading-spinner">
         <Spinner />
@@ -98,12 +99,12 @@ export default function Home() {
       <div className="search-bar">
         <SearchBar setCurrentPage={setCurrentPage} />
       </div>
-      <div className="filters">
+      <div className={darkMode ? "filters-dark" : "filters"}>
         <div className="filters-title">
           {language ? <h3>Filtrar por: </h3> : <h3>Filter by: </h3>}
         </div>
         <div className="alphabetically">
-          <select onChange={(event) => handleSort(event)} className="alpha">
+          <select onChange={(event) => handleSort(event)} className={darkMode ? "alpha-dark" : "alpha"}>
             <option>{language ? "Alfabéticamente" : "Alphabetically"}</option>
             <option value="asc">{language ? "Ascendente" : "Ascending"}</option>
             <option value="desc">
@@ -112,7 +113,7 @@ export default function Home() {
           </select>
         </div>
         <div className="population">
-          <select onChange={(event) => handleFilterSort(event)} className="pop">
+          <select onChange={(event) => handleFilterSort(event)} className={darkMode ? "pop-dark" : "pop"}>
             <option>{language ? "Población" : "Population"}</option>
             <option value="less">{language ? "Menor" : "Less than"}</option>
             <option value="more">{language ? "Mayor" : "More than"}</option>
@@ -121,7 +122,7 @@ export default function Home() {
         <div className="continents">
           <select
             onChange={(event) => handleContinentSort(event)}
-            className="cont"
+            className={darkMode ? "cont-dark" : "cont"}
           >
             <option>{language ? "Continentes" : "Continents"}</option>
             <option value="Africa">{language ? "África" : "Africa"}</option>
@@ -142,7 +143,7 @@ export default function Home() {
         <div className="activities-filter">
           <select
             onChange={(event) => handleActivitiesSort(event)}
-            className="act"
+            className={darkMode ? "act-dark" : "act"}
           >
             <option value={"all"}>
               {language ? "Actividades" : "Activities"}
@@ -172,7 +173,7 @@ export default function Home() {
         </div>
         <div className="clear-filters">
           <button
-            className="clear-filters-btn"
+            className={darkMode ? "clear-filters-btn-dark" : "clear-filters-btn"}
             onClick={(event) => {
               handleOnClick(event);
             }}
@@ -194,7 +195,7 @@ export default function Home() {
           );
         })}
       </div>
-      <div className="pagination">
+      <div className={darkMode ? "pagination-dark" : "pagination"}>
         <Pagination
           countriesByPage={countriesByPage}
           allCountries={allCountries.length}

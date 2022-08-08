@@ -1,0 +1,12 @@
+.dark-mode-button{
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.dark-mode-img{
+    width: 45px;
+    height: 45px;
+}

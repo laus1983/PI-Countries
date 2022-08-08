@@ -2,28 +2,14 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* font-family: poppins;
-  font-size: 7px; */
   color: #143959;
-  /* background-color: #8aedf6; */
   background-color: white;
-  /* opacity: 0.5; */
-  /* background: rgb(255, 255, 255);
-  background: linear-gradient(
-    20deg,
-    rgba(255, 255, 255, 1) 34%,
-    rgba(138, 237, 246, 1) 67%,
-    rgba(96, 162, 245, 1) 89%
-  ); */
   border: 5px;
   border-style: solid;
   border-radius: 9px;
-  /* border-color: #000; */
   border-color: #143959;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  /* margin-bottom: 20px; */
   margin: 15px;
-  /* padding: 20px; */
   width: 190px;
   height: 190px;
 }
@@ -37,7 +23,6 @@
   border: 2px;
   border-radius: 5px;
   border-style: solid;
-  /* border-color: #000; */
   border-color: #143959;
   margin: 0px 7px 15px 7px;
 }
@@ -48,8 +33,6 @@
   border: 2px;
   border-style: solid;
   align-self: center;
-  /* color: #013440; */
-  /* border-color: #000; */
   border-color: #143959;
   border-radius: 10px;
   margin: 15px;
@@ -76,4 +59,60 @@
 
 .card:hover{
     transform: scale(1.1, 1.1);
+}
+
+
+.card-dark{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  background-color: #0a0d14;
+  border: 5px;
+  border-style: solid;
+  border-radius: 9px;
+  border-color: #556ff7;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  margin: 15px;
+  width: 190px;
+  height: 190px;
+}
+
+.card-dark:hover{
+  transform: scale(1.1, 1.1);
+}
+
+.country-name-dark{
+  font-size: 7px;
+  font-family: poppins;
+  font-weight: bold;
+  color: white;
+  background-color: #556ff7;
+}
+
+.continent-dark{
+  font-family: poppins;
+  font-size: 11px;
+  border: 2px;
+  border-style: solid;
+  align-self: center;
+  border-color: #556ff7;
+  border-radius: 10px;
+  margin: 15px;
+  padding: 3px 15px 3px 15px;
+  width: fit-content;
+  height: fit-content;
+}
+
+.flag-dark{
+  width: 65px;
+  height: 65px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 2px;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #556ff7;
+  margin: 0px 7px 15px 7px;
 }

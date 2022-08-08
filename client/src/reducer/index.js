@@ -11,6 +11,7 @@ import {
   COUNTRIES_BY_ACTIVITIES,
   GET_ACTIVITIES,
   POST_ACTIVITIES,
+  DARK_MODE,
   // removeAccents,
 } from "../actions/index";
 
@@ -22,6 +23,7 @@ const initialState = {
   activities: [],
   language: true,
   isLoading: false,
+  darkMode: false,
 };
 
 function rootReducer(state = initialState, action) {
@@ -36,6 +38,11 @@ function rootReducer(state = initialState, action) {
       return {
         ...state,
         language: options,
+      };
+      case DARK_MODE:
+      return {
+        ...state,
+        darkMode: !state.darkMode,
       };
     case GET_COUNTRIES:
       return {

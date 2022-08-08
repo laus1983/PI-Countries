@@ -109,7 +109,6 @@
   flex-wrap: wrap;
   justify-content: center;
   border-radius: 2px;
-  /* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); */
   height: 100%;
   width: 100%;
 }
@@ -164,5 +163,127 @@
   color: #143959;
   border-radius: 5px;
   border-color: #143959;
-  /* cursor: pointer; */
+}
+
+
+.home-dark{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #28364e;
+  height: 100%;
+  width: 100%;
+}
+
+.filters-dark{
+  display: flex;
+  flex-direction: row;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  color: white;
+  background-color: #0a0d14;
+}
+
+.alpha-dark{
+  font-family: poppins;
+  color: white;
+  font-weight: bold;
+  background-color: #0a0d14;
+  border-radius: 10px;
+  border: #556ff7 solid;
+}
+
+.alpha-dark:hover {
+  font-family: poppins;
+  color: #0a0d14;
+  font-weight: bold;
+  background-color: white;
+  border-radius: 10px;
+  border: #556ff7 solid;
+}
+
+.pop-dark{
+  font-family: poppins;
+  color: white;
+  font-weight: bold;
+  background-color: #0a0d14;
+  border-radius: 10px;
+  border: #556ff7 solid;
+}
+
+.pop-dark:hover {
+  font-family: poppins;
+  color: #0a0d14;
+  font-weight: bold;
+  background-color: white;
+  border-radius: 10px;
+  border: #556ff7 solid;
+}
+
+.cont-dark{
+  font-family: poppins;
+  color: white;
+  font-weight: bold;
+  background-color: #0a0d14;
+  border-radius: 10px;
+  border: #556ff7 solid;
+}
+
+.cont-dark:hover {
+  font-family: poppins;
+  color: #0a0d14;
+  font-weight: bold;
+  background-color: white;
+  border-radius: 10px;
+  border: #556ff7 solid;
+}
+
+.act-dark{
+  font-family: poppins;
+  color: white;
+  font-weight: bold;
+  background-color: #0a0d14;
+  border-radius: 10px;
+  border: #556ff7 solid;
+}
+
+.act-dark:hover {
+  font-family: poppins;
+  color: #0a0d14;
+  font-weight: bold;
+  background-color: white;
+  border-radius: 10px;
+  border: #556ff7 solid;
+}
+
+.pagination-dark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: #0a0d14;
+}
+
+.clear-filters-btn-dark{
+  background-color: #556ff7;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  border: #556ff7 solid;
+  cursor: pointer;
+}
+
+.clear-filters-btn-dark:hover {
+  background-color: white;
+  color: #556ff7;
+  font-weight: bold;
+  border-radius: 5px;
+  border-color: #556ff7;
 }
