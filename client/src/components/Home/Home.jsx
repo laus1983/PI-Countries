@@ -28,6 +28,7 @@ export default function Home() {
   const [countriesByPage /*setCountriesByPage*/] = useState(10);
   const [, /*inOrder*/ setInOrder] = useState("");
 
+
   const lastIndex = currentPage * countriesByPage;
   const firstIndex = lastIndex - countriesByPage;
   const currentCountry = allCountries.slice(firstIndex, lastIndex);
@@ -183,7 +184,10 @@ export default function Home() {
         </div>
       </div>
       <div className="cards">
-        {currentCountry?.map((e) => {
+        {typeof currentCountry === "string" ?
+        window.location.reload()
+        :
+        currentCountry.map((e) => {
           return (
             <Card
               key={e.id}

@@ -69,7 +69,7 @@ export function getByName(name, language) {
         payload: data,
       });
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
 }
