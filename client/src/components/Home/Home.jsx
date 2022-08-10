@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Redirect } from "react-router-dom";
 // import { NavLink } from "react-router-dom";
 import {
   getCountries,
@@ -185,7 +186,7 @@ export default function Home() {
       </div>
       <div className="cards">
         {typeof currentCountry === "string" ?
-        window.location.reload()
+        <Redirect to="/notfound" />
         :
         currentCountry.map((e) => {
           return (

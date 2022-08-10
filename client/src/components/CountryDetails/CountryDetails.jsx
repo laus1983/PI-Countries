@@ -168,7 +168,7 @@ export default function CountryDetails() {
                     </p>
                   ))
                 ) : (
-                  <h2 className="noActivity">
+                  <h2 className={darkMode ? "noActivity-dark" : "noActivity"}>
                     {language
                       ? "¡No tiene actividades!"
                       : "It has no activities!"}

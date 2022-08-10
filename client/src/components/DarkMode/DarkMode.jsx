@@ -1,8 +1,8 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { darkModeAction } from "../../actions/index";
-import icon from "./night-mode.png";
-import iconLight from "./night-mode.png";
+import icon from "./dark-mode-1.png";
+import iconLight from "./dark-mode.png";
 import "./DarkMode.css";
 
 export default function DarkMode() {
