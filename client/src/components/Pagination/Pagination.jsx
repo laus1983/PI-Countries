@@ -7,6 +7,7 @@ export default function Pagination({
   countriesByPage,
   allCountries,
   pagesToShow,
+  currentPage,
 }) {
   const pageNumbers = [];
   const darkMode = useSelector((state) => state.darkMode);
@@ -16,6 +17,12 @@ export default function Pagination({
   }
   return (
     <nav className={darkMode ? "pagination-nav-dark" : "pagination"}>
+    <button
+        className={darkMode ? "prev-nav-btn-dark" : "prev-nav-btn"}
+        onClick={() => currentPage=currentPage-1 && pagesToShow(currentPage-1)}
+      >
+        PREV
+      </button>
       <ul className="pages">
         {pageNumbers &&
           pageNumbers.map((number) => {
@@ -28,6 +35,12 @@ export default function Pagination({
             );
           })}
       </ul>
+      <button
+        className={darkMode ? "next-nav-btn-dark" : "next-nav-btn"}
+        onClick={() => currentPage=currentPage+1 && pagesToShow(currentPage+1)}
+      >
+        NEXT
+      </button>
     </nav>
   );
 }

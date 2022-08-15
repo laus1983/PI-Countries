@@ -205,6 +205,7 @@ export default function Home() {
           countriesByPage={countriesByPage}
           allCountries={allCountries.length}
           pagesToShow={pagesToShow}
+          currentPage={currentPage}
         />
       </div></>)}
     </div>

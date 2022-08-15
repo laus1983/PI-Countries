@@ -104,7 +104,7 @@ export default function ActivityCreationForm() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    dispatch(postActivities(input));
+    dispatch(postActivities(input, language));
     setInput({
       name: "",
       difficulty: "",

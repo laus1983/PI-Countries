@@ -1,0 +1,529 @@
+.update-delete-activities-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: url("./fondo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  font-family: poppins;
+}
+
+.delete-activity-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: poppins;
+  backdrop-filter: blur(3px);
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+  border: 1px black solid;
+  border-radius: 13px;
+  margin: 20px;
+  padding: 20px;
+}
+
+.update-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: poppins;
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+  border: 1px black solid;
+  border-radius: 13px;
+  margin: 20px;
+  padding: 20px;
+}
+
+.delete-activity-label {
+  font-family: poppins;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 5px;
+  padding: 5px;
+}
+
+.delete-activity-input {
+  font-family: poppins;
+  font-size: 1rem;
+  border: 1px black solid;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.delete-button {
+  background-color: #9e9e9e;
+  border: 1px solid #000;
+  color: #000;
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #000;
+  color: #ffffff;
+}
+
+.update-activity-input-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: poppins;
+  margin: 10px;
+  padding: 5px;
+}
+
+.update-activity-input {
+  font-family: poppins;
+  border-radius: 13px;
+  border: 1px #000 solid;
+  margin: 10px;
+  padding: 5px;
+}
+
+.update-activity-label {
+  font-family: poppins;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 2px;
+  padding: 2px;
+}
+
+.update-input-difficulty {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: poppins;
+  font-weight: bold;
+  margin: 3px;
+  padding: 3px;
+}
+
+.update-input-duration {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: poppins;
+  font-weight: bold;
+  margin: 2px;
+  padding: 2px;
+}
+
+.update-input-season {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: poppins;
+  font-weight: bold;
+  margin: 3px;
+  padding: 3px;
+}
+
+.update-activity-season-select {
+  font-family: poppins;
+  font-weight: bold;
+  border-radius: 13px;
+  border: 1px #000 solid;
+  margin: 10px;
+  padding: 5px;
+}
+
+.update-activity-season-select:hover {
+  background-color: #9e9e9e;
+  color: #000;
+}
+
+.update-input-delete-countries {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: poppins;
+  font-weight: bold;
+  margin: 3px;
+  padding: 3px;
+}
+
+.form-update-input-countries {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: poppins;
+  font-weight: bold;
+  margin: 3px;
+  padding: 3px;
+}
+
+.update-countries-list-select {
+  font-family: poppins;
+  font-weight: bold;
+  border-radius: 13px;
+  border: 1px #000 solid;
+  margin: 10px;
+  padding: 5px;
+}
+
+.update-countries-list-select:hover {
+  background-color: #9e9e9e;
+  color: #000;
+}
+
+.update-back-btn {
+  background-color: #9e9e9e;
+  border: 1px solid #000;
+  color: #000;
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.update-back-btn:hover {
+  background-color: #000;
+  color: #ffffff;
+}
+
+.update-countries-btn {
+  background-color: #9e9e9e;
+  border: 1px solid #000;
+  color: #000;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 3px;
+  margin: 3px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.update-countries-btn:hover {
+  background-color: #000;
+  color: #ffffff;
+}
+
+.update-submit-btn {
+  background-color: #9e9e9e;
+  border: 1px solid #000;
+  color: #000;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 5px;
+  margin: 3px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.update-submit-btn:hover {
+  background-color: #000;
+  color: #ffffff;
+}
+
+.update-countries {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 3px;
+  margin: 3px;
+  color: black;
+  font-family: poppins;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+}
+
+.update-countries-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  padding: 5px;
+  border: 2px black solid;
+  border-radius: 10px;
+}
+
+@media (max-width: 500px) {
+  .update-delete-activities-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url("./fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    font-family: poppins;
+  }
+
+  .delete-activity-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: poppins;
+    backdrop-filter: blur(3px);
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+    border: 1px black solid;
+    border-radius: 13px;
+    margin: 3px;
+    padding: 3px;
+  }
+
+  .delete-activity-title {
+    font-size: 1rem;
+  }
+
+  .delete-activity-label {
+    font-family: poppins;
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin: 2px;
+    padding: 2px;
+  }
+
+  .delete-activity-input {
+    font-family: poppins;
+    font-size: 0.7rem;
+    border: 1px black solid;
+    border-radius: 10px;
+    margin: 2px;
+    padding: 2px;
+  }
+
+  .delete-button {
+    background-color: #9e9e9e;
+    border: 1px solid #000;
+    color: #000;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 2px;
+    margin: 2px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .update-back-btn {
+    background-color: #9e9e9e;
+    border: 1px solid #000;
+    color: #000;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 2px;
+    margin: 2px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .update-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: poppins;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+    border: 1px black solid;
+    border-radius: 13px;
+    margin: 2px;
+    padding: 2px;
+    width: 90%;
+    height: 100%;
+  }
+
+  .update-activity-input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: poppins;
+    margin: 2px;
+    padding: 2px;
+  }
+
+  .update-input-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: poppins;
+    margin: 2px;
+    padding: 2px;
+  }
+
+  .update-activity-input {
+    font-family: poppins;
+    border-radius: 13px;
+    border: 1px #000 solid;
+    margin: 2px;
+    padding: 2px;
+  }
+
+  .update-activity-label {
+    font-family: poppins;
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin: 2px;
+    padding: 2px;
+  }
+
+  .update-input-difficulty {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: poppins;
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin: 2px;
+    padding: 2px;
+  }
+
+  .update-input-duration {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: poppins;
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin: 2px;
+    padding: 2px;
+  }
+
+  .update-input-season {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: poppins;
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin: 2px;
+    padding: 2px;
+  }
+
+  .update-activity-season-select {
+    font-family: poppins;
+    font-size: 0.7rem;
+    font-weight: bold;
+    border-radius: 13px;
+    border: 1px #000 solid;
+    margin: 2px;
+    padding: 2px;
+  }
+
+  .update-input-delete-countries {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: poppins;
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin: 2px;
+    padding: 2px;
+  }
+
+  .form-update-input-countries {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: poppins;
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin: 2px;
+    padding: 2px;
+  }
+
+  .update-countries-list-select {
+    font-family: poppins;
+    font-size: 0.7rem;
+    font-weight: bold;
+    border-radius: 13px;
+    border: 1px #000 solid;
+    margin: 2px;
+    padding: 2px;
+  }
+
+  .update-submit-btn {
+    background-color: #9e9e9e;
+    border: 1px solid #000;
+    color: #000;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 2px;
+    margin: 2px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .update-countries {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 2px;
+    margin: 2px;
+    color: black;
+    font-family: poppins;
+    font-size: 0.7rem;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+  }
+
+  .update-countries-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    margin: 2px;
+    padding: 2px;
+    border: 2px black solid;
+    border-radius: 10px;
+  }
+}

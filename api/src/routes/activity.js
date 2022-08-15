@@ -2,11 +2,11 @@ const { Router } = require("express");
 const { Country, Activity, CountryActivity } = require("../db.js");
 const router = Router();
 
-router.post("/", async (req, res, next) => {
+router.post("/create", async (req, res, next) => {
   if (!req.body) res.send("The form is empty");
 
   try {
-    const { name, difficulty, duration, season, countriesList } = req.body;
+    const { language, name, difficulty, duration, season, countriesList } = req.body;
 
     const activityCreated = await Activity.create({
       name,
@@ -15,9 +15,13 @@ router.post("/", async (req, res, next) => {
       season: season.toLowerCase(),
     });
 
-    const dbCountries = await Country.findAll({
+    const dbCountries = language === "true" ? await Country.findAll({
       where: {
         nameSpa: countriesList,
+      },
+    }) : await Country.findAll({
+      where: {
+        name: countriesList,
       },
     });
 
@@ -40,5 +44,49 @@ router.get("/", async (req, res, next) => {
   }
 });
 
+router.delete("/:id", async (req, res, next) => {
+  try{
+    const { id } = req.params;
+    const activity = await Activity.findByPk(id);
+    const result = await activity.destroy();
+    res.json(result);
+  }catch(e){
+    next(e);
+  }
+})
+
+router.put("/update/:id", async (req, res, next) => {
+  try{
+    const { id } = req.params;
+    const { language, name, difficulty, duration, season, deleteCountries, countriesList } = req.body;
+    const activity = await Activity.findByPk(id);
+    const result = await activity.update({
+      name,
+      difficulty: parseInt(difficulty),
+      duration: parseInt(duration),
+      season: season.toLowerCase(),
+    });
+    const dbCountries = language === "true" ? await Country.findAll({
+      where: {
+        nameSpa: countriesList,
+      },
+    }) : await Country.findAll({
+      where: {
+        name: countriesList,
+      },
+    });
+    // const result2 = await activity.addCountry(dbCountries);
+    if (deleteCountries === "yes") {
+      const result3 = await activity.removeCountries(countriesList);
+      // const result4 = await activity.addCountry(dbCountries);
+    } else {
+      const result2 = await activity.addCountry(dbCountries);
+    }
+    const result4 = await activity.addCountry(dbCountries);
+    res.json(result);
+  }catch(e){
+    next(e);
+  }
+})
 
 module.exports = router;

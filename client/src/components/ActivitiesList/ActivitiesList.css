@@ -1,0 +1,46 @@
+.activities-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  background-image: url("./fondo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  font-family: poppins;
+  font-weight: bold;
+}
+
+.cards-activities-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-family: poppins;
+  font-weight: bold;
+}
+
+.activities-list-back-btn {
+  background-color: #5e3023;
+  border: 1px solid #d4a373;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.activities-list-back-btn:hover {
+  background-color: #d4a373;
+  border: 1px solid #5e3023;
+  color: #5e3023;
+}

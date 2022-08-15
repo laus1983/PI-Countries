@@ -1,0 +1,42 @@
+.act-card-dark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: poppins;
+  color: #000000;
+  backdrop-filter: blur(3px);
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+  border: 1px black solid;
+  border-radius: 13px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.act-name {
+  font-family: poppins;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin: 3px;
+  padding: 3px;
+}
+
+.actId {
+  margin: 1px;
+  padding: 1px;
+}
+
+.actName {
+  margin: 1px;
+  padding: 1px;
+}
+
+.act-card-info {
+  font-family: poppins;
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin: 3px;
+  padding: 3px;
+}

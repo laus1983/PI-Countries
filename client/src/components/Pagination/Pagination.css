@@ -1,50 +1,116 @@
 .pagination {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
-.pages{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-    list-style: none;
-    padding: 0%;
-    
+.pages {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  list-style: none;
+  padding: 0%;
 }
 
 .page-number {
-    cursor: pointer;
-    width: 20px;
-    height: 20px;
-    color: #143959;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  color: #143959;
 }
 
-.page-number:hover{
-    font-weight: bold;
+.prev-nav-btn {
+  cursor: pointer;
+  padding: 5px;
+  background-color: #143959;
+  color: #eeeeee;
+  font-weight: bold;
+  border: #eeeeee solid;
+  border-radius: 5px;
 }
 
-.pagination-nav-dark{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    background-color: #0a0d14;
+.prev-nav-btn:hover {
+  background-color: #eeeeee;
+  color: #143959;
+  border: #143959 solid;
+  border-radius: 5px;
 }
 
-.page-number-dark{
-    cursor: pointer;
-    width: 20px;
-    height: 20px;
-    color: #556ff7;
+.next-nav-btn {
+  cursor: pointer;
+  padding: 5px;
+  background-color: #143959;
+  color: #eeeeee;
+  font-weight: bold;
+  border: #eeeeee solid;
+  border-radius: 5px;
 }
 
-.page-number-dark:hover{
-    color: white;
-    font-weight: bold;
+.next-nav-btn:hover {
+  background-color: #eeeeee;
+  color: #143959;
+  border: #143959 solid;
+  border-radius: 5px;
+}
+
+.page-number:hover {
+  font-weight: bold;
+}
+
+.pagination-nav-dark {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #0a0d14;
+}
+
+.page-number-dark {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  color: #556ff7;
+}
+
+.page-number-dark:hover {
+  color: white;
+  font-weight: bold;
+}
+
+.prev-nav-btn-dark {
+  cursor: pointer;
+  padding: 5px;
+  margin: 5px;
+  background-color: #556ff7;
+  color: white;
+  font-weight: bold;
+  border: #556ff7 solid;
+  border-radius: 5px;
+}
+
+.prev-nav-btn-dark:hover {
+  background-color: white;
+  color: #556ff7;
+  border: #556ff7 solid;
+}
+
+.next-nav-btn-dark {
+  cursor: pointer;
+  padding: 5px;
+  margin: 5px;
+  background-color: #556ff7;
+  color: white;
+  font-weight: bold;
+  border: #556ff7 solid;
+  border-radius: 5px;
+}
+
+.next-nav-btn-dark:hover {
+  background-color: white;
+  color: #556ff7;
+  border: #556ff7 solid;
 }

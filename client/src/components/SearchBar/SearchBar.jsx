@@ -16,6 +16,7 @@ export default function SearchBar({ setCurrentPage }) {
   const isLoading = useSelector((state) => state.isLoading);
   const darkMode = useSelector((state) => state.darkMode);
 
+
   function handleInput(event) {
     // console.log(ev.target.value);
     setName(event.target.value);
@@ -44,8 +45,8 @@ export default function SearchBar({ setCurrentPage }) {
         <img src={darkMode ? exitDark : exit} alt="Icon-exit" className="icon-exit" />
       </NavLink>
 
-      <NavLink to="/activities" className={darkMode ? "actForm-dark" : "actForm"}>
-        <h4 className="crearActividad">{language ? "Crear actividad" : "Create activity"}</h4>
+      <NavLink to="/activities/options" className={darkMode ? "actForm-dark" : "actForm"}>
+        <h4 className="crearActividad">{language ? "Actividades" : "Activities"}</h4>
       </NavLink>
       <div>
       <DarkMode />

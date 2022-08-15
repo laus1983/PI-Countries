@@ -11,6 +11,8 @@ import {
   COUNTRIES_BY_ACTIVITIES,
   GET_ACTIVITIES,
   POST_ACTIVITIES,
+  DELETE_ACTIVITY,
+  UPDATE_ACTIVITY,
   DARK_MODE,
   // removeAccents,
 } from "../actions/index";
@@ -151,6 +153,17 @@ function rootReducer(state = initialState, action) {
         ...state,
         activities: action.payload,
       };
+      case DELETE_ACTIVITY:
+        // const activityDelete = state.activities.filter((c) => c.id !== action.payload);
+        return {
+          ...state,
+          activities: action.payload,
+        };
+        case UPDATE_ACTIVITY:
+          return {
+            ...state,
+            activities: action.payload,
+          };
     default:
       return state;
   }
