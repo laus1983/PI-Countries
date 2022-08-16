@@ -71,7 +71,6 @@ export function getByName(name, language) {
         payload: data,
       });
     } catch (error) {
-      // console.log(error);
     }
   };
 }
@@ -138,9 +137,10 @@ export function postActivities(activities, language) {
     try {
       console.log(activities);
       console.log(language);
+      console.log(typeof language);
       const { data } = await axios.post(
-        "http://localhost:3001/activities/create",
-        activities, language
+        `http://localhost:3001/activities/create?language=${language}`,
+        activities
       );
       dispatch({
         type: POST_ACTIVITIES,
@@ -186,8 +186,8 @@ export function putActivity(input, inputValue, language) {
   return async function (dispatch) {
     try {
       const { data } = await axios.put(
-        `http://localhost:3001/activities/update/${input}`,
-        inputValue, language
+        `http://localhost:3001/activities/update/${input}?language=${language}`,
+        inputValue
       );
       dispatch({
         type: UPDATE_ACTIVITY,

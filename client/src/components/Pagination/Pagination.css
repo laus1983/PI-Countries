@@ -1,3 +1,12 @@
+.pagination-nav-container{
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px;
+  width: 100%;
+}
+
 .pagination {
   display: flex;
   flex-direction: row;
@@ -12,7 +21,8 @@
   justify-content: space-around;
   width: 100%;
   list-style: none;
-  padding: 0%;
+  margin: 5px;
+  padding: 0px;
 }
 
 .page-number {
@@ -58,6 +68,39 @@
 
 .page-number:hover {
   font-weight: bold;
+}
+
+.page-position{
+  color: #143959;
+  font-family: poppins;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: 1px #143959 solid;
+  border-radius: 5px;
+  padding: 3px;
+  margin: 0px;
+  width: fit-content;
+}
+
+.pagination-nav-container-dark{
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px;
+  width: 100%;
+}
+
+.page-position-dark{
+  color: #556ff7;
+  font-family: poppins;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: 1px #556ff7 solid;
+  border-radius: 5px;
+  padding: 3px;
+  margin: 0px;
+  width: fit-content;
 }
 
 .pagination-nav-dark {

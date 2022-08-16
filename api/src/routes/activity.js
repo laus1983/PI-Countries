@@ -6,7 +6,8 @@ router.post("/create", async (req, res, next) => {
   if (!req.body) res.send("The form is empty");
 
   try {
-    const { language, name, difficulty, duration, season, countriesList } = req.body;
+    const { language } = req.query;
+    const { name, difficulty, duration, season, countriesList } = req.body;
 
     const activityCreated = await Activity.create({
       name,
@@ -15,15 +16,18 @@ router.post("/create", async (req, res, next) => {
       season: season.toLowerCase(),
     });
 
-    const dbCountries = language === "true" ? await Country.findAll({
-      where: {
-        nameSpa: countriesList,
-      },
-    }) : await Country.findAll({
-      where: {
-        name: countriesList,
-      },
-    });
+    const dbCountries =
+      language === "true"
+        ? await Country.findAll({
+            where: {
+              nameSpa: countriesList,
+            },
+          })
+        : await Country.findAll({
+            where: {
+              name: countriesList,
+            },
+          });
 
     const result = await activityCreated.addCountry(dbCountries);
 
@@ -45,20 +49,28 @@ router.get("/", async (req, res, next) => {
 });
 
 router.delete("/:id", async (req, res, next) => {
-  try{
+  try {
     const { id } = req.params;
     const activity = await Activity.findByPk(id);
     const result = await activity.destroy();
     res.json(result);
-  }catch(e){
+  } catch (e) {
     next(e);
   }
-})
+});
 
 router.put("/update/:id", async (req, res, next) => {
-  try{
+  try {
     const { id } = req.params;
-    const { language, name, difficulty, duration, season, deleteCountries, countriesList } = req.body;
+    const { language } = req.query;
+    const {
+      name,
+      difficulty,
+      duration,
+      season,
+      deleteCountries,
+      countriesList,
+    } = req.body;
     const activity = await Activity.findByPk(id);
     const result = await activity.update({
       name,
@@ -66,27 +78,29 @@ router.put("/update/:id", async (req, res, next) => {
       duration: parseInt(duration),
       season: season.toLowerCase(),
     });
-    const dbCountries = language === "true" ? await Country.findAll({
-      where: {
-        nameSpa: countriesList,
-      },
-    }) : await Country.findAll({
-      where: {
-        name: countriesList,
-      },
-    });
-    // const result2 = await activity.addCountry(dbCountries);
+    const dbCountries =
+      language === "true"
+        ? await Country.findAll({
+            where: {
+              nameSpa: countriesList,
+            },
+          })
+        : await Country.findAll({
+            where: {
+              name: countriesList,
+            },
+          });
     if (deleteCountries === "yes") {
-      const result3 = await activity.removeCountries(countriesList);
-      // const result4 = await activity.addCountry(dbCountries);
+      const aux = await activity.getCountries();
+      const countriesDelete = await activity.removeCountry(aux);
     } else {
-      const result2 = await activity.addCountry(dbCountries);
+      const countriesAdd = await activity.addCountry(dbCountries);
     }
-    const result4 = await activity.addCountry(dbCountries);
+    const countriesResult = await activity.addCountry(dbCountries);
     res.json(result);
-  }catch(e){
+  } catch (e) {
     next(e);
   }
-})
+});
 
 module.exports = router;

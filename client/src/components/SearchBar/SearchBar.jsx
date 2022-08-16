@@ -18,7 +18,6 @@ export default function SearchBar({ setCurrentPage }) {
 
 
   function handleInput(event) {
-    // console.log(ev.target.value);
     setName(event.target.value);
     event.preventDefault();
   }
@@ -60,7 +59,6 @@ export default function SearchBar({ setCurrentPage }) {
             onChange={handleInput}
             value={name}
           />
-          {/* <button className='submit' type='submit'><img src={icon} alt='Icon-search' className='icon-search'/></button> */}
           <input type="submit" value={language ? "Búsqueda" : "Search"} className={darkMode ? "icon-search-dark" : "icon-search"} />
         </form>
       </div>

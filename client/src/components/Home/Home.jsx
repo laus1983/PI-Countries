@@ -2,7 +2,6 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
-// import { NavLink } from "react-router-dom";
 import {
   getCountries,
   orderByName,
@@ -15,10 +14,10 @@ import Card from "../Card/Card";
 import Pagination from "../Pagination/Pagination.jsx";
 import SearchBar from "../SearchBar/SearchBar.jsx";
 import Spinner from "../Spinner/Spinner.jsx";
-// import LanguageSwitch from "../LanguageSwitch/LanguageSwitch.jsx";
 import "./Home.css";
 
 export default function Home() {
+
   const dispatch = useDispatch();
   const allCountries = useSelector((state) => state.countries);
   const activitiesList = useSelector((state) => state.activities);
@@ -26,7 +25,7 @@ export default function Home() {
   const isLoading = useSelector((state) => state.isLoading);
   const darkMode = useSelector((state) => state.darkMode);
   const [currentPage, setCurrentPage] = useState(1);
-  const [countriesByPage /*setCountriesByPage*/] = useState(10);
+  const [countriesByPage /*setCountriesByPage*/] = useState(9);
   const [, /*inOrder*/ setInOrder] = useState("");
 
 
@@ -42,8 +41,6 @@ export default function Home() {
       activitiesRender.push(activitiesArray[i]);
     }
   }} catch (error) {
-    // console.log(activitiesRender);
-    // console.log(error);
   }
 
   const pagesToShow = (pageNumber) => {
@@ -95,9 +92,7 @@ export default function Home() {
         <div className="loading-spinner">
         <Spinner />
         </div>
-      ) : (<>{/* <div className="language-switch">
-        <LanguageSwitch />
-      </div> */}
+      ) : (<>
       <div className="search-bar">
         <SearchBar setCurrentPage={setCurrentPage} />
       </div>
@@ -150,19 +145,6 @@ export default function Home() {
             <option value={"all"}>
               {language ? "Actividades" : "Activities"}
             </option>
-            if (activitiesRender.length === 0)
-            {
-              <p className="form-link">
-                {language ? "No hay actividades." : "There are no activities."}
-              </p>
-            }
-            {/* {
-              <NavLink to="/activities" className="activities-form">
-                <p className="form-link">
-                  There are no activities.
-                </p>
-              </NavLink>
-            } */}
             {activitiesRender &&
               activitiesRender.map((act) => {
                 return (

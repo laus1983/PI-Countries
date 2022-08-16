@@ -14,7 +14,6 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  /* height: 100%; */
   color: #143959;
 }
 
@@ -26,7 +25,6 @@
   top: 0;
   align-items: center;
   justify-content: center;
-  /* height: 100%; */
   width: 100%;
   color: #143959;
   background-color: white;
@@ -117,7 +115,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* height: 100%; */
   width: 100%;
   background-color: #e0e0e0;
 }
@@ -184,7 +181,6 @@
   top: 0;
   align-items: center;
   justify-content: center;
-  /* height: 100%; */
   width: 100%;
   color: white;
   background-color: #0a0d14;
@@ -266,7 +262,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* height: 100%; */
   width: 100%;
   background-color: #0a0d14;
 }

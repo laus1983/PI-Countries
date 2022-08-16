@@ -1,3 +1,4 @@
+import { loadState } from "../localStorage";
 import {
   LOADING,
   SWITCH_LANGUAGE,
@@ -14,8 +15,9 @@ import {
   DELETE_ACTIVITY,
   UPDATE_ACTIVITY,
   DARK_MODE,
-  // removeAccents,
 } from "../actions/index";
+
+export const persistedState = loadState();
 
 const initialState = {
   countries: [],
@@ -26,6 +28,7 @@ const initialState = {
   language: true,
   isLoading: false,
   darkMode: false,
+  persistedState,
 };
 
 function rootReducer(state = initialState, action) {
@@ -56,7 +59,6 @@ function rootReducer(state = initialState, action) {
     case GET_COUNTRIES_BY_NAME:
       return {
         ...state,
-        // country: action.payload,
         countries: action.payload,
         isLoading: false,
       };
@@ -154,7 +156,6 @@ function rootReducer(state = initialState, action) {
         activities: action.payload,
       };
       case DELETE_ACTIVITY:
-        // const activityDelete = state.activities.filter((c) => c.id !== action.payload);
         return {
           ...state,
           activities: action.payload,

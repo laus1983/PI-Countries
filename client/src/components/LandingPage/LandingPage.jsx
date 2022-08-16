@@ -7,6 +7,8 @@ import "./LandingPage.css";
 export default function LandingPage() {
   const language = useSelector((state) => state.language);
 
+
+
   return (
     <div className="landing">
       <div className="title-landing">

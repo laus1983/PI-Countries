@@ -32,10 +32,7 @@ router.get("/", async (req, res, next) => {
           if (countries.length > 0) {
             res.json(countries);
           } else {
-            res.status(200).json("País no encontrado");
-            // res.status(404).send("País no encontrado");
-            // res.sendStatus(404);
-            // res.send("País no encontrado");
+            res.send("País no encontrado");
           }
         }
       } else {
@@ -60,10 +57,7 @@ router.get("/", async (req, res, next) => {
           if (countries.length > 0) {
             res.json(countries);
           } else {
-            // res.sendStatus(404);
-            res.status(200).json("Country not found");
-            // res.status(404).send("Country not found");
-            // res.send("Country not found");
+            res.send("Country not found");
           }
         }
       }
