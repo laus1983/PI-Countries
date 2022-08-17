@@ -48,14 +48,6 @@
   color: white;
   background-color: #143959;
 }
-/* .name {
-    font-size: 1.5em;
-    font-weight: bold;
-    border: 3px;
-    border-style: solid;
-    border-color: #000;
-    border-radius: 5px;
-} */
 
 .card:hover{
     transform: scale(1.1, 1.1);
@@ -115,4 +107,117 @@
   border-style: solid;
   border-color: #556ff7;
   margin: 0px 7px 15px 7px;
+}
+
+@media (max-width: 500px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #143959;
+    background-color: white;
+    border: 2px;
+    border-style: solid;
+    border-radius: 9px;
+    border-color: #143959;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: 110px;
+    height: 110px;
+  }
+  
+  .flag {
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #143959;
+    margin: 0px 4px 10px 4px;
+  }
+  
+  .continent {
+    font-family: poppins;
+    font-size: 9px;
+    border: 1px;
+    border-style: solid;
+    align-self: center;
+    border-color: #143959;
+    border-radius: 10px;
+    margin: 7px;
+    padding: 2px 10px 2px 10px;
+    width: fit-content;
+    height: fit-content;
+  }
+  
+  .country-name {
+    font-size: 4px;
+    font-family: poppins;
+    /* font-weight: bold; */
+    color: white;
+    background-color: #143959;
+  }
+  
+  .card:hover{
+      transform: scale(1.1, 1.1);
+  }
+  
+  
+  .card-dark{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    background-color: #0a0d14;
+    border: 5px;
+    border-style: solid;
+    border-radius: 9px;
+    border-color: #556ff7;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: 110px;
+    height: 110px;
+  }
+  
+  .card-dark:hover{
+    transform: scale(1.1, 1.1);
+  }
+  
+  .country-name-dark{
+    font-size: 4px;
+    font-family: poppins;
+    /* font-weight: bold; */
+    color: white;
+    background-color: #556ff7;
+  }
+  
+  .continent-dark{
+    font-family: poppins;
+    font-size: 9px;
+    border: 2px;
+    border-style: solid;
+    align-self: center;
+    border-color: #556ff7;
+    border-radius: 10px;
+    margin: 7px;
+    padding: 2px 10px 2px 10px;
+    width: fit-content;
+    height: fit-content;
+  }
+  
+  .flag-dark{
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #556ff7;
+    margin: 0px 4px 10px 4px;
+  }
 }

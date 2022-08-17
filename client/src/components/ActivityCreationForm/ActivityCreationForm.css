@@ -11,7 +11,7 @@
 .form-img-container {
   display: flex;
   flex-direction: column;
-  background-image: url("./ian-dooley-hpTH5b6mo2s-unsplash\ \(3\).jpg");
+  background-image: url("./fondo-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -254,7 +254,7 @@
   color: white;
 }
 
-.title-activities-form-dark{
+.title-activities-form-dark {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -264,7 +264,7 @@
   font-weight: bold;
 }
 
-.tourist-activities-dark{
+.tourist-activities-dark {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -274,7 +274,7 @@
   background-color: #28364e;
 }
 
-.activities-form-dark{
+.activities-form-dark {
   display: flex;
   flex-direction: column;
   align-items: left;
@@ -292,7 +292,7 @@
   background-color: #0a0d14;
 }
 
-.form-name-box-dark{
+.form-name-box-dark {
   border: 2px #556ff7 solid;
   border-radius: 10px;
   padding: 3px;
@@ -302,7 +302,7 @@
   width: fit-content;
 }
 
-.form-season-select-dark{
+.form-season-select-dark {
   margin-left: 3px;
   border-radius: 10px;
   border: 2px #556ff7 solid;
@@ -313,14 +313,14 @@
   background-color: #0a0d14;
 }
 
-.form-season-select-dark:hover{
+.form-season-select-dark:hover {
   color: #0a0d14;
   font-weight: bold;
   background-color: white;
   border: #556ff7 solid;
 }
 
-.countries-list-dark{
+.countries-list-dark {
   margin-left: 3px;
   border-radius: 10px;
   border: 2px #556ff7 solid;
@@ -330,7 +330,7 @@
   background-color: #0a0d14;
 }
 
-.countries-list-dark:hover{
+.countries-list-dark:hover {
   color: #0a0d14;
   font-weight: bold;
   background-color: white;
@@ -351,7 +351,7 @@
   height: 100%;
 }
 
-.form-country-dark{
+.form-country-dark {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -361,7 +361,7 @@
   border: 2px #556ff7 solid;
 }
 
-.delete-btn-dark{
+.delete-btn-dark {
   cursor: pointer;
   font-family: poppins;
   font-weight: bold;
@@ -378,7 +378,7 @@
   color: #556ff7;
 }
 
-.create-btn-dark{
+.create-btn-dark {
   cursor: pointer;
   font-family: poppins;
   font-weight: bold;
@@ -388,7 +388,7 @@
   border-radius: 5px;
 }
 
-.create-btn-dark:hover{
+.create-btn-dark:hover {
   cursor: pointer;
   font-family: poppins;
   font-weight: bold;
@@ -398,7 +398,7 @@
   border-radius: 5px;
 }
 
-.go-back-btn-dark{
+.go-back-btn-dark {
   cursor: pointer;
   font-family: poppins;
   font-size: 15px;
@@ -411,7 +411,7 @@
   height: 35px;
 }
 
-.go-back-btn-dark:hover{
+.go-back-btn-dark:hover {
   cursor: pointer;
   font-family: poppins;
   font-size: 15px;
@@ -424,10 +424,7 @@
   height: 35px;
 }
 
-
-
-
-@media(max-width: 500px){
+@media (max-width: 500px) {
   .tourist-activities {
     display: flex;
     flex-direction: column;
@@ -440,7 +437,7 @@
   .form-img-container {
     display: flex;
     flex-direction: column;
-    background-image: url("./sunguk-kim-WksmEy5wV1s-unsplash\ \(1\).jpg");
+    background-image: url("./fondo-responsive.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -527,7 +524,7 @@
     font-size: 12px;
     font-weight: bold;
   }
-  
+
   .form-season-select {
     margin-left: 2px;
     border-radius: 10px;
@@ -537,7 +534,7 @@
     font-size: 12px;
     background-color: white;
   }
-  
+
   .form-season-select:hover {
     border: 2px white solid;
     color: white;
@@ -553,7 +550,7 @@
     font-size: 12px;
     font-weight: bold;
   }
-  
+
   .countries-list {
     margin-left: 2px;
     border-radius: 10px;
@@ -563,7 +560,7 @@
     font-size: 12px;
     background-color: white;
   }
-  
+
   .countries-list:hover {
     border: 2px white solid;
     color: white;
@@ -583,7 +580,7 @@
     width: 100%;
     height: 100%;
   }
-  
+
   .form-country {
     display: flex;
     flex-direction: row;
@@ -653,7 +650,7 @@
     width: 80px;
     height: 35px;
   }
-  
+
   .go-back-btn:hover {
     background-color: white;
     color: #018abe;

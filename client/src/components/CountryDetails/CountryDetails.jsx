@@ -109,30 +109,94 @@ export default function CountryDetails() {
                   />
                 </div>
                 <div className="country-info">
-                  <h1 className={darkMode ? "countries-info-labels-dark" : "countries-info-labels"}>{country.id}</h1>
-                  <h2 className={darkMode ? "countries-info-labels-dark" : "countries-info-labels"}>
+                  <h1
+                    className={
+                      darkMode
+                        ? "countries-info-labels-dark"
+                        : "countries-info-labels"
+                    }
+                  >
+                    {country.id}
+                  </h1>
+                  <h2
+                    className={
+                      darkMode
+                        ? "countries-info-labels-dark"
+                        : "countries-info-labels"
+                    }
+                  >
                     {language ? country.nameSpa : country.name}
                   </h2>
-                  <h3 className={darkMode ? "countries-info-content-dark" : "countries-info-content"}>
-                    <i className={darkMode ? "countries-info-labels-dark" : "countries-info-labels"}>Capital: </i>
+                  <h3
+                    className={
+                      darkMode
+                        ? "countries-info-content-dark"
+                        : "countries-info-content"
+                    }
+                  >
+                    <i
+                      className={
+                        darkMode
+                          ? "countries-info-labels-dark"
+                          : "countries-info-labels"
+                      }
+                    >
+                      Capital:{" "}
+                    </i>
                     {country.capital}
                   </h3>
-                  <h3 className={darkMode ? "countries-info-content-dark" : "countries-info-content"}>
-                    <i className={darkMode ? "countries-info-labels-dark" : "countries-info-labels"}>
+                  <h3
+                    className={
+                      darkMode
+                        ? "countries-info-content-dark"
+                        : "countries-info-content"
+                    }
+                  >
+                    <i
+                      className={
+                        darkMode
+                          ? "countries-info-labels-dark"
+                          : "countries-info-labels"
+                      }
+                    >
                       {language ? "Subregión: " : "Subregion: "}
                     </i>
                     {language
                       ? subregionName(country.subregion)
                       : country.subregion}
                   </h3>
-                  <h3 className={darkMode ? "countries-info-content-dark" : "countries-info-content"}>
-                    <i className={darkMode ? "countries-info-labels-dark" : "countries-info-labels"}>
+                  <h3
+                    className={
+                      darkMode
+                        ? "countries-info-content-dark"
+                        : "countries-info-content"
+                    }
+                  >
+                    <i
+                      className={
+                        darkMode
+                          ? "countries-info-labels-dark"
+                          : "countries-info-labels"
+                      }
+                    >
                       {language ? "Área: " : "Area: "}
                     </i>
                     {parseInt(country.area).toLocaleString("de-DE")} Km2
                   </h3>
-                  <h3 className={darkMode ? "countries-info-content-dark" : "countries-info-content"}>
-                    <i className={darkMode ? "countries-info-labels-dark" : "countries-info-labels"}>
+                  <h3
+                    className={
+                      darkMode
+                        ? "countries-info-content-dark"
+                        : "countries-info-content"
+                    }
+                  >
+                    <i
+                      className={
+                        darkMode
+                          ? "countries-info-labels-dark"
+                          : "countries-info-labels"
+                      }
+                    >
                       {language ? "Población: " : "Population: "}
                     </i>
                     {country.population.toLocaleString("de-DE")}
@@ -141,27 +205,52 @@ export default function CountryDetails() {
               </div>
               <div className="activities-container">
                 <h2 className="activities-label-title">
-                  <i className={darkMode ? "activities-label-dark" : "activities-label"}>
+                  <i
+                    className={
+                      darkMode ? "activities-label-dark" : "activities-label"
+                    }
+                  >
                     {language ? "Actividades" : "Activities: "}
                   </i>
                 </h2>
                 {country.Activities?.length > 0 ? (
                   country.Activities?.map((act) => (
-                    <p className={darkMode ? "activities-info-container-dark" : "activities-info-container"} key={act.id}>
-                      {/* <li className="actInfoLabel">Id: {act.id}</li> */}
-                      <li className={darkMode ? "actInfoLabel-1-dark" : "actInfoLabel-1"}>
-                        {/* {language ? "Actividad: " : "Activity: "} */}
+                    <p
+                      className={
+                        darkMode
+                          ? "activities-info-container-dark"
+                          : "activities-info-container"
+                      }
+                      key={act.id}
+                    >
+                      <li
+                        className={
+                          darkMode ? "actInfoLabel-1-dark" : "actInfoLabel-1"
+                        }
+                      >
                         {act.name}
                       </li>
-                      <li className={darkMode ? "actInfoLabel-dark" : "actInfoLabel"}>
+                      <li
+                        className={
+                          darkMode ? "actInfoLabel-dark" : "actInfoLabel"
+                        }
+                      >
                         {language ? "Temporada: " : "Season: "}
                         {language ? seasonName(act.season) : act.season}
                       </li>
-                      <li className={darkMode ? "actInfoLabel-dark" : "actInfoLabel"}>
+                      <li
+                        className={
+                          darkMode ? "actInfoLabel-dark" : "actInfoLabel"
+                        }
+                      >
                         {language ? "Duración: " : "Duration: "}
                         {act.duration}
                       </li>
-                      <li className={darkMode ? "actInfoLabel-dark" : "actInfoLabel"}>
+                      <li
+                        className={
+                          darkMode ? "actInfoLabel-dark" : "actInfoLabel"
+                        }
+                      >
                         {language ? "Dificultad: " : "Difficulty: "}{" "}
                         {act.difficulty}
                       </li>
@@ -183,7 +272,9 @@ export default function CountryDetails() {
           )}
           <div className="back-container">
             <NavLink to="/countries" className="back">
-              <button className={darkMode ? "back-btn-info-dark" : "back-btn-info"}>
+              <button
+                className={darkMode ? "back-btn-info-dark" : "back-btn-info"}
+              >
                 {language ? "⬅ Volver" : "⬅ Go Back"}
               </button>
             </NavLink>

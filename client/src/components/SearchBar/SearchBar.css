@@ -22,8 +22,8 @@
   font-size: 20px;
 }
 
-.actForm:hover{
-    text-decoration: underline;
+.actForm:hover {
+  text-decoration: underline;
 }
 
 .icon-search {
@@ -45,12 +45,12 @@
   height: auto;
 }
 
-.search-input{
-    padding: 9px;
-    width: 300px;
-    height: 5px;
-    border: #eeeeee solid;
-    border-radius: 10px;
+.search-input {
+  padding: 9px;
+  width: 300px;
+  height: 5px;
+  border: #eeeeee solid;
+  border-radius: 10px;
 }
 
 .icon-search:hover {
@@ -60,7 +60,7 @@
   border-radius: 5px;
 }
 
-.actForm-dark{
+.actForm-dark {
   padding: 5px;
   text-decoration: none;
   color: white;
@@ -69,13 +69,13 @@
   font-size: 20px;
 }
 
-.actForm-dark:hover{
+.actForm-dark:hover {
   color: #556ff7;
   text-decoration: underline;
   transition: 0.3s;
 }
 
-.icon-search-dark{
+.icon-search-dark {
   cursor: pointer;
   padding: 5px;
   margin: 5px;
@@ -86,16 +86,123 @@
   border-radius: 5px;
 }
 
-.icon-search-dark:hover{
+.icon-search-dark:hover {
   background-color: white;
   color: #556ff7;
   border: #556ff7 solid;
 }
 
-.search-input-dark{
+.search-input-dark {
   padding: 9px;
   width: 300px;
   height: 5px;
   border: #28364e solid;
   border-radius: 10px;
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: left;
+    height: fit-content;
+    width: fit-content;
+  }
+  .icon-exit {
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+  }
+  .actForm {
+    padding: 2px;
+    text-decoration: none;
+    color: #143959;
+    font-family: poppins;
+    font-weight: bold;
+    font-size: 13px;
+  }
+  .icon-search {
+    cursor: pointer;
+    padding: 2px;
+    background-color: #143959;
+    color: #eeeeee;
+    font-weight: bold;
+    border: #eeeeee solid;
+    border-radius: 5px;
+  }
+  .search {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    height: fit-content;
+  }
+  .search-input {
+    margin: 1px;
+    padding: 2px;
+    height: fit-content;
+    width: fit-content;
+    border: #eeeeee solid;
+    border-radius: 10px;
+  }
+  .actForm:hover {
+    text-decoration: underline;
+  }
+
+  .icon-search {
+    cursor: pointer;
+    padding: 2px;
+    background-color: #143959;
+    color: #eeeeee;
+    font-weight: bold;
+    border: #eeeeee solid;
+    border-radius: 5px;
+    width: fit-content;
+    height: fit-content;
+  }
+  .icon-search:hover {
+    background-color: #eeeeee;
+    color: #143959;
+    border: #143959 solid;
+    border-radius: 5px;
+  }
+  .actForm-dark {
+    padding: 2px;
+    text-decoration: none;
+    color: white;
+    font-family: poppins;
+    font-weight: bold;
+    font-size: 13px;
+  }
+  
+  .actForm-dark:hover {
+    color: #556ff7;
+    text-decoration: underline;
+    transition: 0.3s;
+  }
+  
+  .icon-search-dark {
+    cursor: pointer;
+    padding: 2px;
+    margin: 2px;
+    background-color: #556ff7;
+    color: white;
+    font-weight: bold;
+    border: #556ff7 solid;
+    border-radius: 5px;
+  }
+  
+  .icon-search-dark:hover {
+    background-color: white;
+    color: #556ff7;
+    border: #556ff7 solid;
+  }
+  
+  .search-input-dark {
+    padding: 2px;
+    width: fit-content;
+    height: fit-content;
+    border: #28364e solid;
+    border-radius: 10px;
+  }
 }

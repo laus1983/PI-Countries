@@ -13,9 +13,14 @@ export default function LandingPage() {
     <div className="landing">
       <div className="title-landing">
         {language ? (
-          <h1>Bienvenido a la App de Países</h1>
+          <h1 className="title-landing-h">Bienvenido a CountryTravel</h1>
         ) : (
-          <h1>Welcome to the Countries App</h1>
+          <h1>Welcome to CountryTravel</h1>
+        )}
+        {language ? (
+          <h3 className="title-landing-h">El mundo necesita más exploradores y menos turistas</h3>
+        ):(
+          <h3>The world needs more explorers and fewer tourists</h3>
         )}
       </div>
       <div className="linkTo">

@@ -76,7 +76,6 @@ export default function Home() {
     event.preventDefault();
     dispatch(filterByContinent(event.target.value));
     setCurrentPage(1);
-    // setInOrder(event.target.value);
   }
 
   function handleActivitiesSort(event) {

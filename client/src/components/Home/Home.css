@@ -282,3 +282,298 @@
   border-radius: 5px;
   border-color: #556ff7;
 }
+
+
+
+
+@media (max-width: 500px) {
+
+  .home {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: flex-start;
+    background-color: #eeeeee;
+    height: 100vh;
+    width: 100vw;
+  }
+  .search-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: #143959;
+  }
+  .filters {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: #143959;
+    background-color: white;
+  }
+  .filters-title{
+    font-family: poppins;
+    font-weight: bold;
+    font-size: 12px;
+  }
+  
+  .alphabetically {
+    padding: 2px;
+  }
+  
+  .alpha {
+    font-family: poppins;
+    font-size: 12px;
+    color: white;
+    font-weight: 250;
+    background-color: #143959;
+    border-radius: 10px;
+    border: white solid;
+  }
+  
+  .population {
+    padding: 2px;
+  }
+  
+  .pop {
+    font-family: poppins;
+    font-size: 12px;
+    color: white;
+    font-weight: 250;
+    background-color: #143959;
+    border-radius: 10px;
+    border: white solid;
+  }
+  
+  .continents {
+    padding: 2px;
+  }
+  
+  .cont {
+    font-family: poppins;
+    font-size: 12px;
+    color: white;
+    font-weight: 250;
+    background-color: #143959;
+    border-radius: 10px;
+    border: white solid;
+  }
+  
+  .act {
+    font-family: poppins;
+    font-size: 12px;
+    color: white;
+    font-weight: 250;
+    background-color: #143959;
+    border-radius: 10px;
+    border: white solid;
+  }
+  
+  .activities-filter {
+    padding: 2px;
+  }
+  .cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 2px;
+    height: 100%;
+    width: 100%;
+  }
+  .clear-filters {
+    padding: 2px;
+    cursor: pointer;
+  }
+  
+  .clear-filters-btn{
+    background-color: #143959;
+    color: white;
+    border-radius: 5px;
+    border: white solid;
+    cursor: pointer;
+  }
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #e0e0e0;
+  }
+  .alpha:hover {
+    font-family: poppins;
+    color: #143959;
+    font-weight: 350;
+    background-color: white;
+    border-radius: 10px;
+    border: #143959 solid;
+  }
+  
+  .pop:hover {
+    font-family: poppins;
+    color: #143959;
+    font-weight: 350;
+    background-color: white;
+    border-radius: 10px;
+    border: #143959 solid;
+  }
+  
+  .cont:hover {
+    font-family: poppins;
+    color: #143959;
+    font-weight: 350;
+    background-color: white;
+    border-radius: 10px;
+    border: #143959 solid;
+  }
+  
+  .act:hover {
+    font-family: poppins;
+    color: #143959;
+    font-weight: 350;
+    background-color: white;
+    border-radius: 10px;
+    border: #143959 solid;
+  }
+  
+  .clear-filters-btn:hover {
+    background-color: white;
+    color: #143959;
+    border-radius: 5px;
+    border-color: #143959;
+  }
+  .home-dark{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: flex-start;
+    background-color: #28364e;
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  .filters-dark{
+    display: flex;
+    flex-direction: column;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: white;
+    background-color: #0a0d14;
+  }
+  
+  .alpha-dark{
+    font-family: poppins;
+    font-size: 13px;
+    color: white;
+    font-weight: bold;
+    background-color: #0a0d14;
+    border-radius: 10px;
+    border: #556ff7 solid;
+  }
+  
+  .alpha-dark:hover {
+    font-family: poppins;
+    font-size: 13px;
+    color: #0a0d14;
+    font-weight: bold;
+    background-color: white;
+    border-radius: 10px;
+    border: #556ff7 solid;
+  }
+  
+  .pop-dark{
+    font-family: poppins;
+    font-size: 13px;
+    color: white;
+    font-weight: bold;
+    background-color: #0a0d14;
+    border-radius: 10px;
+    border: #556ff7 solid;
+  }
+  
+  .pop-dark:hover {
+    font-family: poppins;
+    font-size: 13px;
+    color: #0a0d14;
+    font-weight: bold;
+    background-color: white;
+    border-radius: 10px;
+    border: #556ff7 solid;
+  }
+  
+  .cont-dark{
+    font-family: poppins;
+    font-size: 13px;
+    color: white;
+    font-weight: bold;
+    background-color: #0a0d14;
+    border-radius: 10px;
+    border: #556ff7 solid;
+  }
+  
+  .cont-dark:hover {
+    font-family: poppins;
+    font-size: 13px;
+    color: #0a0d14;
+    font-weight: bold;
+    background-color: white;
+    border-radius: 10px;
+    border: #556ff7 solid;
+  }
+  
+  .act-dark{
+    font-family: poppins;
+    font-size: 13px;
+    color: white;
+    font-weight: bold;
+    background-color: #0a0d14;
+    border-radius: 10px;
+    border: #556ff7 solid;
+  }
+  
+  .act-dark:hover {
+    font-family: poppins;
+    font-size: 13px;
+    color: #0a0d14;
+    font-weight: bold;
+    background-color: white;
+    border-radius: 10px;
+    border: #556ff7 solid;
+  }
+  
+  .pagination-dark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #0a0d14;
+  }
+  
+  .clear-filters-btn-dark{
+    background-color: #556ff7;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    border: #556ff7 solid;
+    cursor: pointer;
+  }
+  
+  .clear-filters-btn-dark:hover {
+    background-color: white;
+    color: #556ff7;
+    font-weight: bold;
+    border-radius: 5px;
+    border-color: #556ff7;
+  }
+}

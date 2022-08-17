@@ -29,8 +29,6 @@ export default function EditDeleteActivities() {
   }
 
   function handleOnSubmit(event) {
-    console.log(input);
-    console.log(typeof input);
     if (!input) {
       alert(
         language

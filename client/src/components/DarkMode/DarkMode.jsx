@@ -11,7 +11,6 @@ export default function DarkMode() {
 
   function handleOnClick(event) {
     event.preventDefault();
-    console.log(darkMode);
     dispatch(darkModeAction());
   }
 

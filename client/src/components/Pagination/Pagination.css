@@ -1,4 +1,4 @@
-.pagination-nav-container{
+.pagination-nav-container {
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-around;
@@ -70,7 +70,7 @@
   font-weight: bold;
 }
 
-.page-position{
+.page-position {
   color: #143959;
   font-family: poppins;
   font-size: 1.1rem;
@@ -82,7 +82,7 @@
   width: fit-content;
 }
 
-.pagination-nav-container-dark{
+.pagination-nav-container-dark {
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-around;
@@ -91,7 +91,7 @@
   width: 100%;
 }
 
-.page-position-dark{
+.page-position-dark {
   color: #556ff7;
   font-family: poppins;
   font-size: 1.1rem;
@@ -156,4 +156,166 @@
   background-color: white;
   color: #556ff7;
   border: #556ff7 solid;
+}
+
+@media (max-width: 500px) {
+  .pagination-nav-container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2px;
+    width: 100%;
+  }
+
+  .pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .pages {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    list-style: none;
+    margin: 2px;
+    padding: 0px;
+  }
+
+  .page-number {
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    color: #143959;
+  }
+
+  .prev-nav-btn {
+    cursor: pointer;
+    padding: 2px;
+    background-color: #143959;
+    color: #eeeeee;
+    font-weight: bold;
+    border: #eeeeee solid;
+    border-radius: 5px;
+  }
+
+  .prev-nav-btn:hover {
+    background-color: #eeeeee;
+    color: #143959;
+    border: #143959 solid;
+    border-radius: 5px;
+  }
+
+  .next-nav-btn {
+    cursor: pointer;
+    padding: 2px;
+    background-color: #143959;
+    color: #eeeeee;
+    font-weight: bold;
+    border: #eeeeee solid;
+    border-radius: 5px;
+  }
+
+  .next-nav-btn:hover {
+    background-color: #eeeeee;
+    color: #143959;
+    border: #143959 solid;
+    border-radius: 5px;
+  }
+
+  .page-number:hover {
+    font-weight: bold;
+  }
+
+  .page-position {
+    color: #143959;
+    font-family: poppins;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border: 1px #143959 solid;
+    border-radius: 5px;
+    padding: 2px;
+    margin: 0px;
+    width: fit-content;
+  }
+
+  .pagination-nav-container-dark {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2px;
+    width: 100%;
+  }
+
+  .page-position-dark {
+    color: #556ff7;
+    font-family: poppins;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border: 1px #556ff7 solid;
+    border-radius: 5px;
+    padding: 2px;
+    margin: 0px;
+    width: fit-content;
+  }
+
+  .pagination-nav-dark {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #0a0d14;
+  }
+
+  .page-number-dark {
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    color: #556ff7;
+  }
+
+  .page-number-dark:hover {
+    color: white;
+    font-weight: bold;
+  }
+
+  .prev-nav-btn-dark {
+    cursor: pointer;
+    padding: 2px;
+    margin: 2px;
+    background-color: #556ff7;
+    color: white;
+    font-weight: bold;
+    border: #556ff7 solid;
+    border-radius: 5px;
+  }
+
+  .prev-nav-btn-dark:hover {
+    background-color: white;
+    color: #556ff7;
+    border: #556ff7 solid;
+  }
+
+  .next-nav-btn-dark {
+    cursor: pointer;
+    padding: 2px;
+    margin: 2px;
+    background-color: #556ff7;
+    color: white;
+    font-weight: bold;
+    border: #556ff7 solid;
+    border-radius: 5px;
+  }
+
+  .next-nav-btn-dark:hover {
+    background-color: white;
+    color: #556ff7;
+    border: #556ff7 solid;
+  }
 }
